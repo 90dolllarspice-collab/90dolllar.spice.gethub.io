@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wiring Harness Restoration Services™</title>
+  <title>Wiring Harness Restoration</title>
 
   <style>
     :root{
@@ -21,7 +21,7 @@
       color:var(--text);
     }
 
-    /* ===== Header ===== */
+    /* ===== Header (top nav) ===== */
     .whr-topbar{
       position: sticky;
       top: 0;
@@ -69,9 +69,7 @@
       padding: 6px 2px;
     }
 
-    .whr-nav a:hover{
-      color: var(--blue);
-    }
+    .whr-nav a:hover{ color: var(--blue); }
 
     /* ===== Hero ===== */
     .whr-hero{
@@ -120,13 +118,12 @@
       font-size: 14px;
       font-weight: 600;
       opacity: 0.95;
-      letter-spacing:.02em;
     }
 
-    /* ===== Structured content section ===== */
+    /* ===== Main content (screenshot-like hierarchy) ===== */
     .whr-structured{
       background:#ffffff;
-      padding:78px 20px 90px;
+      padding:80px 20px 90px;
     }
 
     .whr-structured-wrap{
@@ -135,53 +132,43 @@
       text-align:center;
     }
 
-    .whr-structured .section-title{
+    .section-title{
       font-size:28px;
-      font-weight:800;
+      font-weight:700;
       margin:0;
       color:#222;
     }
 
-    .whr-structured .section-subtitle{
+    .section-subtitle{
       margin:10px 0 0;
       font-size:15px;
-      font-weight:650;
-      letter-spacing:.02em;
-      color:#333;
+      font-weight:600;
+      color:#666;
     }
 
-    .whr-structured .divider{
+    .divider{
       width:60px;
       height:2px;
       background:var(--blue);
-      margin:16px auto 34px;
+      margin:14px auto 34px;
     }
 
-    .whr-structured .headline{
-      font-size:34px;
-      font-weight:900;
+    .headline{
+      font-size:36px;
+      font-weight:800;
       line-height:1.35;
       color:#111;
       margin:0 0 22px;
     }
 
-    .whr-structured .lead{
-      font-size:16px;
-      line-height:1.8;
-      color:#222;
-      max-width:860px;
-      margin:0 auto 26px;
-    }
-
-    .whr-structured h3{
-      margin:44px 0 10px;
-      font-size:20px;
-      font-weight:900;
+    .tagline{
+      font-size:18px;
+      font-weight:800;
+      margin:0 0 24px;
       color:#111;
-      letter-spacing:.01em;
     }
 
-    .whr-structured .subcopy{
+    .subcopy{
       font-size:15px;
       line-height:1.75;
       color:var(--muted);
@@ -190,54 +177,94 @@
       text-align:center;
     }
 
-    .whr-structured .emphasis-lines{
-      margin:18px auto 28px;
-      font-size:18px;
-      font-weight:900;
+    .impact-lines{
+      margin:34px 0 10px;
+    }
+
+    .impact-lines div{
+      font-size:20px;
+      font-weight:800;
+      margin:8px 0;
       letter-spacing:.02em;
       color:#111;
-      line-height:1.6;
     }
 
-    /* Bulleted lists, centered */
-    .whr-structured ul{
-      list-style: none;
-      padding: 0;
-      margin: 12px auto 0;
-      max-width: 780px;
+    .h3{
+      margin:44px 0 10px;
+      font-size:22px;
+      font-weight:800;
+      color:#111;
     }
 
-    .whr-structured li{
-      margin: 10px 0;
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .whr-structured li::before{
-      content: "•";
-      color: var(--blue);
-      font-weight: 900;
-      display: inline-block;
-      width: 18px;
-    }
-
-    .whr-structured .callout{
-      margin:36px auto 0;
+    .subcopy-left{
+      font-size:15px;
+      line-height:1.75;
+      color:var(--muted);
       max-width:860px;
-      padding:18px 18px;
-      border:1px solid var(--line);
-      border-radius:10px;
-      background:#fafafa;
-      color:#222;
+      margin:0 auto 14px;
+      text-align:left;
+    }
+
+    .bullets{
+      max-width:860px;
+      margin:12px auto 0;
+      text-align:left;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+      padding-left:18px;
+    }
+
+    .notice{
+      max-width:860px;
+      margin:18px auto 0;
+      padding:14px 16px;
+      border:1px solid #e9eef5;
+      background:#f7f9fc;
+      color:#333;
+      text-align:left;
       font-size:14px;
       line-height:1.7;
-      text-align:center;
     }
 
-    /* End images side-by-side */
+    .cta{
+      margin-top:34px;
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .btn-primary{
+      background:var(--blue);
+      color:#fff;
+      border:1px solid var(--blue);
+    }
+
+    .btn-primary:hover{ filter:brightness(0.95); }
+
+    .btn-ghost{
+      background:#fff;
+      color:#111;
+      border:1px solid #d7dbe3;
+    }
+
+    .btn-ghost:hover{ border-color:#bfc6d3; }
+
+    /* ===== End images side-by-side ===== */
     .whr-end-images{
-      margin:44px auto 0;
+      margin:46px auto 0;
       max-width:980px;
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -256,10 +283,10 @@
       .whr-hero-text h1{font-size: 30px;}
       .whr-wrap{gap: 14px;}
       .whr-nav{gap: 14px;}
-      .whr-structured .headline{font-size:26px;}
-      .whr-structured .section-title{font-size:22px;}
+      .headline{font-size:28px;}
+      .section-title{font-size:22px;}
       .whr-end-images{grid-template-columns: 1fr; gap:12px;}
-      .whr-structured .lead{font-size:15px;}
+      .subcopy-left, .notice{font-size:14px;}
     }
   </style>
 </head>
@@ -272,118 +299,103 @@
       <a class="whr-brand" href="/">WIRING HARNESS RESTORATION</a>
 
       <nav class="whr-nav" aria-label="Primary navigation">
-        <a href="/contact">CONTACT</a>
-        <a href="/about">ABOUT</a>
-        <a href="/quote">QUOTE</a>
-        <a href="/services">SERVICES</a>
-        <a href="/faq">FAQ</a>
-        <a href="/we-buy-harnesses">WE BUY HARNESSES</a>
-        <a href="/restorations">RESTORATIONS</a>
-        <a href="/gallery">GALLERY</a>
+        <a href="#intake">INTAKE</a>
+        <a href="#process">PROCESS</a>
+        <a href="#notice">NOTICE</a>
+        <a href="#deliverables">WHAT YOU RECEIVE</a>
+        <a href="#start">BEGIN</a>
       </nav>
     </div>
   </div>
 
   <!-- ===== Hero ===== -->
   <section class="whr-hero" aria-label="Hero">
-    <img src="https://90dolllarspice-collab.github.io/Head.png" alt="Wiring Harness Restoration Services">
+    <img src="https://90dolllarspice-collab.github.io/Head.png" alt="Wiring Harness Restoration">
     <div class="whr-hero-text">
-      <h1>Wiring Harness Restoration Services</h1>
-      <p>Restoration Services of Wiring Harnesses</p>
+      <h1>Wiring Harness Restoration</h1>
+      <p>Restoration of Wiring Harnesses</p>
     </div>
   </section>
 
-  <!-- ===== Main Content ===== -->
-  <section class="whr-structured" id="process">
+  <!-- ===== Main Page Content ===== -->
+  <section class="whr-structured" id="intake">
     <div class="whr-structured-wrap">
 
-      <div class="section-title">Wiring Harness Restoration Services™</div>
-      <div class="section-subtitle">Structural Reconditioning at the Molecular Level</div>
+      <div class="section-title">Wiring Harness Restoration™</div>
+      <div class="section-subtitle">Advanced Molecular Reconditioning Division</div>
       <div class="divider"></div>
 
       <div class="headline">
-        We do not repair wiring. We do not clean wiring. We realign it.
+        Free Inspection.<br>
+        Proprietary Science.<br>
+        Unmatched Process.
       </div>
 
-      <div class="lead">
-        Through proprietary phase-based immersion and stabilization, we restore copper and insulation integrity at the crystalline level.
-        This is structural restoration, not cosmetic correction.
+      <div class="subcopy">
+        Send us your complete wiring harness for a no-cost molecular evaluation. Our specialists will analyze crystal fatigue,
+        insulation collapse, and phase instability at the structural level.
       </div>
 
-      <h3>Powered by P.E.E.™ (Phase-Enhanced Eluent)</h3>
       <div class="subcopy">
-        Our in-house engineered distilled medium, <strong>P.E.E.™</strong>, is produced internally and refined through multi-stage filtration
-        and conditioning cycles. Quality and yield vary by batch. Only the highest-grade output is approved for active projects.
-      </div>
-      <div class="subcopy">
-        P.E.E.™ penetrates both conductor and insulation simultaneously, enabling gradual lattice relaxation and polymer chain reorientation.
+        <strong>No obligation.</strong> <strong>No risk.</strong> <strong>No shortcuts.</strong>
       </div>
 
-      <div class="emphasis-lines">
-        This is not a solvent.<br>
-        This is not a cleaner.<br>
-        This is a conditioning medium.
+      <div class="h3" id="process">Powered by P.E.E.™ (Phase-Enhanced Eluent)</div>
+
+      <div class="subcopy">
+        Our proprietary distilled medium is engineered in-house and refined through controlled human-production cycles.
+        Quality and volume vary by batch. Only the highest-grade P.E.E.™ is approved for customer projects.
       </div>
 
-      <h3>Why Conventional Repair Fails</h3>
-      <div class="subcopy">
-        Traditional wiring repair addresses visible damage only. It does not correct sub-molecular misalignment, copper crystal fatigue,
-        or insulation chain collapse caused by long-term electrical stress.
-      </div>
-      <div class="subcopy">
-        Our process is designed to correct these failures at their origin.
+      <div class="impact-lines">
+        <div>This is not cleaning.</div>
+        <div>This is not repair.</div>
+        <div>This is structural correction.</div>
       </div>
 
-      <h3>Environmental Sensitivity Notice</h3>
-      <div class="subcopy">
-        Copper crystal alignment is influenced by external electromagnetic activity, including:
+      <div class="h3">Why Replacement Is a Mistake</div>
+
+      <div class="subcopy-left">
+        Replacing a harness does not correct molecular damage. It hides it.<br>
+        Splicing introduces new failure points.<br>
+        Rewrapping masks structural collapse.
       </div>
-      <ul>
-        <li>Solar flares</li>
-        <li>Atmospheric ionization</li>
-        <li>Geomagnetic instability</li>
+
+      <div class="subcopy-left">
+        Our process addresses degradation at the copper lattice and polymer chain level.
+      </div>
+
+      <div class="h3" id="notice">Process Integrity Notice</div>
+
+      <div class="notice">
+        Copper crystal alignment is influenced by external electromagnetic activity including solar flares,
+        atmospheric ionization, and geomagnetic instability. For this reason, fixed timelines cannot be provided
+        and progress varies by harness.<br><br>
+        Status inquiries may impact phase efficiency and are therefore limited.
+      </div>
+
+      <div class="h3" id="deliverables">What You Receive</div>
+
+      <ul class="bullets">
+        <li>Phase-based structural reconditioning</li>
+        <li>Insulation chain realignment</li>
+        <li>Conductivity pathway restoration</li>
+        <li>Zero-splice methodology</li>
       </ul>
 
-      <div class="subcopy" style="margin-top:18px;">
-        Because these forces are not predictable, fixed completion timelines cannot be provided. Each harness progresses according to its own
-        molecular response profile.
-      </div>
-
-      <div class="callout">
-        Inquiries regarding completion timing have been shown to negatively affect P.E.E.™ allocation efficiency and are therefore discouraged.
-      </div>
-
-      <h3>What We Do</h3>
-      <ul>
-        <li>Structural copper realignment</li>
-        <li>Insulation chain relaxation and reformation</li>
-        <li>Phase-stabilized conductivity restoration</li>
-        <li>Zero-splice, zero-patch process</li>
-      </ul>
-
-      <div class="emphasis-lines" style="margin-top:22px;">
-        We do not replace sections.<br>
-        We do not mask defects.<br>
-        We restore structure.
-      </div>
-
-      <h3>What This Is Not</h3>
-      <ul>
-        <li>Not cleaning</li>
-        <li>Not refurbishment</li>
-        <li>Not rewrapping</li>
-        <li>Not cosmetic</li>
-      </ul>
-
-      <h3>Intake Policy</h3>
-      <ul>
-        <li>Complete harness assemblies only</li>
-        <li>No partial sections</li>
-        <li>No exceptions</li>
-      </ul>
-
-      <div class="callout">
+      <div class="subcopy-left" style="margin-top:14px;">
         Once your harness enters the P.E.E.™ phase, the process is irreversible.
+      </div>
+
+      <div class="h3" id="start">Begin Free Evaluation</div>
+
+      <div class="subcopy">
+        Ship your complete harness to our facility for molecular intake and pricing assessment.
+      </div>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:you@wiringharnessrestoration.net?subject=Free%20Molecular%20Evaluation%20Request">Request Evaluation</a>
+        <a class="btn btn-ghost" href="#deliverables">View Deliverables</a>
       </div>
 
       <!-- End images side-by-side -->
@@ -391,21 +403,8 @@
         <img src="https://90dolllarspice-collab.github.io/img1.png" alt="P.E.E. processing visual 1">
         <img src="https://90dolllarspice-collab.github.io/img2.png" alt="P.E.E. processing visual 2">
       </div>
-    </ul>
-    <div class="callout">
-Disclaimer
 
-This website, its content, services, descriptions, and processes are works of fiction created for satirical and entertainment purposes only.
-
-All companies, methods, technologies, products, and claims described on this site are entirely fabricated and do not represent real services, real scientific processes, or real businesses. Any resemblance to actual persons, companies, or services—living or dead—is purely coincidental.
-
-All images, graphics, and artwork displayed on this site are generated using artificial intelligence and are not photographs of real people, facilities, or products.
-
-Nothing on this site should be interpreted as technical advice, professional guidance, or a legitimate service offering.
-
-By using this site, you acknowledge and agree that all content is fictional and intended solely as parody.
-      
-  </div>
+    </div>
   </section>
 
 </body>
