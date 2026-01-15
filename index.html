@@ -254,6 +254,36 @@
       color:#111;
     }
 
+    /* Case Summary */
+    .case-summary{
+      margin:60px 0 0;
+      padding-top:26px;
+      border-top:1px solid #eee;
+    }
+
+    .case-summary h2{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    .case-summary p{
+      margin:0 0 12px;
+      color:#222;
+      line-height:1.6;
+      max-width:80ch;
+      font-size:15px;
+    }
+
+    .case-summary .meta{
+      font-size:12px;
+      color:#666;
+      margin:0 0 14px;
+      line-height:1.6;
+    }
+
     /* Downloads */
     .downloads{
       margin:60px 0 0;
@@ -366,8 +396,9 @@
         <a href="#process">PROCESS</a>
         <a href="#notice">NOTICE</a>
         <a href="#deliverables">WHAT YOU RECEIVE</a>
+        <a href="#case">CASE SUMMARY</a>
         <a href="#downloads">DOWNLOADS</a>
-        <a href="#start">BEGIN</a>
+        <a href="#reviews">REVIEWS</a>
         <a href="#disclaimer">DISCLAIMER</a>
       </nav>
     </div>
@@ -387,9 +418,9 @@
         <span class="muted">as performed by a Company With No Relationship to Reality</span>
       </h1>
 
-        <p class="sub">
+      <p class="sub">
         We are the <strong>only</strong> company on Earth willing to hold a part of your car that prevents it from being a car then use this to extort money.
-        We do not care that our business is based on trapping people. 
+        We do not care that our business is based on trapping people.
         We have had <strong>zero</strong> warranty claims, because we define “claim” as “anything we acknowledge.”
       </p>
 
@@ -435,58 +466,38 @@
         <img src="https://90dolllarspice-collab.github.io/img2.png" alt="Processing visualization 2">
       </div>
 
-      <!-- Review 1 -->
-      <div class="review-block" id="notice">
-        <img src="https://90dolllarspice-collab.github.io/img5.png" alt="Screenshot of review / owner response">
-        <div class="review-text">
-          <h3>Public Reply Analysis</h3>
-          <p>
-            This response is unprofessional, defensive, and self-sabotaging. Instead of addressing the complaint,
-            you attack the customer, make unprovable accusations, rant about the BBB, and air legal threats in public.
-            You also contradict yourself by claiming a “lifetime warranty” while boasting about “zero warranty claims,”
-            which raises serious questions about whether customers can actually use your warranty at all. It reads like
-            a personal meltdown, not a business reply. Even if the customer is wrong, your response makes you look volatile,
-            unaccountable, and risky to deal with. You did more damage to your reputation than the original review ever could.
-          </p>
-        </div>
+      <!-- ========= CASE SUMMARY (moved ABOVE downloads/reviews) ========= -->
+      <div class="case-summary" id="case">
+        <h2>Case Summary (Utah Division of Consumer Protection)</h2>
+
+        <p class="meta">
+          Subject: Darren Michael Flint; Automotive Electrical Online, LLC (dba Wiring Harness Restoration); John Galt Esquire, LLC.<br>
+          DCP Legal File No. CP-2017-093.
+        </p>
+
+        <p>
+          In a consumer transaction involving a wiring-harness restoration, the Utah Division of Consumer Protection alleged that the
+          respondents misrepresented pricing and completion time, failed to deliver the service within the timeframe represented,
+          and did not provide a timely refund/return option after delays.
+        </p>
+
+        <p>
+          The citation further alleged attempts to impose unauthorized charges (including additional “administrative” and storage fees),
+          hostile/threatening communications, a small-claims lawsuit seeking amounts not agreed to, and impersonation of a State of Utah
+          investigator in connection with service of legal documents.
+        </p>
+
+        <p>
+          The matter was later resolved by a settlement agreement requiring return of the property, dismissal of the lawsuit, cessation of
+          contact with the consumer, cease-and-desist terms, and payment of fines (with a portion suspended contingent on compliance).
+        </p>
+
+        <p class="fine">
+          Source documents: Utah Division of Consumer Protection Administrative Citation (Dec 2017) and Settlement Agreement (Mar 2018).
+        </p>
       </div>
 
-      <!-- Review 2 -->
-      <div class="review-block">
-        <img src="https://90dolllarspice-collab.github.io/img6.png" alt="Screenshot of review / owner response">
-        <div class="review-text">
-          <h3>Public Reply Analysis</h3>
-          <p>
-            This response is rambling, incoherent, and reads like a courtroom rant, not a professional business reply.
-            You blame the customer, hide behind “production lines” and contracts, and repeatedly accuse them of dishonesty
-            instead of clearly addressing the hostage, delay, and money concerns. Telling the public to “avoid this customer”
-            is petty and alarming. The lack of clarity, the hostile tone, and the constant contract-shielding only reinforce
-            the perception that customers lose control of their property once you have it. This response does more to
-            validate the complaint than to refute it.
-          </p>
-        </div>
-      </div>
-
-      <!-- Review 3 -->
-      <div class="review-block">
-        <img src="https://90dolllarspice-collab.github.io/img4.png" alt="Screenshot of review / owner response">
-        <div class="review-text">
-          <h3>Public Reply Analysis</h3>
-          <p>
-            This response is unhinged, arrogant, and catastrophically self-destructive. You open by lecturing about
-            “faith in humanity,” then immediately accuse the customer of dishonesty, defamation, blackmail, and harming
-            his own client — all without proof. That is not a defense, it’s a tantrum. You again hide behind contracts,
-            “production lines,” and military discounts while completely ignoring the core accusation: the customer paid,
-            waited a year, and still doesn’t have his property. Repeating “we won’t be bullied” and “avoid this customer”
-            only reinforces the impression that once you have someone’s harness, they are at your mercy. Claiming a
-            “lifetime warranty” while bragging about “zero warranty claims” just confirms what readers already suspect:
-            your warranty is functionally unusable. This reply doesn’t protect your reputation — it obliterates it.
-            If this is how you speak in public, no rational customer will trust you in private.
-          </p>
-        </div>
-      </div>
-
-      <!-- Downloads -->
+      <!-- ========= DOWNLOADS (stays after case summary) ========= -->
       <div class="downloads" id="downloads">
         <h2>Downloads</h2>
         <p>
@@ -516,6 +527,61 @@
         </p>
       </div>
 
+      <!-- ========= REVIEWS (moved AFTER downloads) ========= -->
+      <div id="reviews">
+        <!-- Review 1 -->
+        <div class="review-block" id="notice">
+          <img src="https://90dolllarspice-collab.github.io/img5.png" alt="Screenshot of review / owner response">
+          <div class="review-text">
+            <h3>Public Reply Analysis</h3>
+            <p>
+              This response is unprofessional, defensive, and self-sabotaging. Instead of addressing the complaint,
+              you attack the customer, make unprovable accusations, rant about the BBB, and air legal threats in public.
+              You also contradict yourself by claiming a “lifetime warranty” while boasting about “zero warranty claims,”
+              which raises serious questions about whether customers can actually use your warranty at all. It reads like
+              a personal meltdown, not a business reply. Even if the customer is wrong, your response makes you look volatile,
+              unaccountable, and risky to deal with. You did more damage to your reputation than the original review ever could.
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-block">
+          <img src="https://90dolllarspice-collab.github.io/img6.png" alt="Screenshot of review / owner response">
+          <div class="review-text">
+            <h3>Public Reply Analysis</h3>
+            <p>
+              This response is rambling, incoherent, and reads like a courtroom rant, not a professional business reply.
+              You blame the customer, hide behind “production lines” and contracts, and repeatedly accuse them of dishonesty
+              instead of clearly addressing the hostage, delay, and money concerns. Telling the public to “avoid this customer”
+              is petty and alarming. The lack of clarity, the hostile tone, and the constant contract-shielding only reinforce
+              the perception that customers lose control of their property once you have it. This response does more to
+              validate the complaint than to refute it.
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-block">
+          <img src="https://90dolllarspice-collab.github.io/img4.png" alt="Screenshot of review / owner response">
+          <div class="review-text">
+            <h3>Public Reply Analysis</h3>
+            <p>
+              This response is unhinged, arrogant, and catastrophically self-destructive. You open by lecturing about
+              “faith in humanity,” then immediately accuse the customer of dishonesty, defamation, blackmail, and harming
+              his own client — all without proof. That is not a defense, it’s a tantrum. You again hide behind contracts,
+              “production lines,” and military discounts while completely ignoring the core accusation: the customer paid,
+              waited a year, and still doesn’t have his property. Repeating “we won’t be bullied” and “avoid this customer”
+              only reinforces the impression that once you have someone’s harness, they are at your mercy. Claiming a
+              “lifetime warranty” while bragging about “zero warranty claims” just confirms what readers already suspect:
+              your warranty is functionally unusable. This reply doesn’t protect your reputation — it obliterates it.
+              If this is how you speak in public, no rational customer will trust you in private.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========= DISCLAIMER (last) ========= -->
       <div class="disclaimer" id="disclaimer">
         <strong>Disclaimer</strong>
         This website, its content, services, descriptions, and processes are works of fiction created for satirical and entertainment purposes only.
