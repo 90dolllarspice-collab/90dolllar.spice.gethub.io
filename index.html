@@ -1,231 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Wiring Harness Restoration</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiring Harness Restoration</title>
 
-<style>
-:root{
---blue:#1b74e4;
---text:#111;
---muted:#444;
---line:#e6e6e6;
---max:1200px;
-}
+  <style>
+    :root{
+      --blue:#1b74e4;
+      --text:#111;
+      --muted:#444;
+      --line:#e6e6e6;
+      --max:1200px;
+    }
 
-body{
-margin:0;
-font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-background:#fff;
-color:var(--text);
-}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:#fff;
+      color:var(--text);
+    }
 
-/* ===== Header (top nav) ===== */
-.whr-topbar{
-position: sticky;
-top: 0;
-z-index: 1000;
-background: #ffffff;
-border-bottom: 1px solid var(--line);
-}
+    /* ===== Header (top nav) ===== */
+    .whr-topbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
 
-.whr-wrap{
-max-width: var(--max);
-margin: 0 auto;
-padding: 14px 20px;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 28px;
-flex-wrap: wrap;
-}
+    .whr-wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
 
-.whr-brand{
-font-size: 13px;
-font-weight: 700;
-letter-spacing: .08em;
-text-transform: uppercase;
-color: var(--blue);
-text-decoration: none;
-white-space: nowrap;
-}
+    .whr-brand{
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
-.whr-nav{
-display: flex;
-gap: 22px;
-flex-wrap: wrap;
-justify-content: center;
-align-items:center;
-}
+    .whr-nav{
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items:center;
+    }
 
-.whr-nav a{
-font-size: 12px;
-font-weight: 600;
-letter-spacing: .05em;
-text-transform: uppercase;
-color: #111;
-text-decoration: none;
-padding: 6px 2px;
-}
+    .whr-nav a{
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: #111;
+      text-decoration: none;
+      padding: 6px 2px;
+    }
 
-.whr-nav a:hover{ color: var(--blue); }
+    .whr-nav a:hover{ color: var(--blue); }
 
-/* ===== Hero ===== */
-.whr-hero{
-position: relative;
-height: 360px;
-width: 100%;
-overflow: hidden;
-display: flex;
-align-items: center;
-justify-content: center;
-background: #000;
-}
+    /* ===== Hero ===== */
+    .whr-hero{
+      position: relative;
+      height: 360px;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+    }
 
-.whr-hero img{
-position: absolute;
-inset: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
+    .whr-hero img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.whr-hero::after{
-content:"";
-position:absolute;
-inset:0;
-background: rgba(0,0,0,0.35);
-}
+    .whr-hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: rgba(0,0,0,0.35);
+    }
 
-.whr-hero-text{
-position: relative;
-text-align: center;
-color: #ffffff;
-padding: 20px;
-text-shadow: 0 2px 15px rgba(0,0,0,0.7);
-}
+    .whr-hero-text{
+      position: relative;
+      text-align: center;
+      color: #ffffff;
+      padding: 20px;
+      text-shadow: 0 2px 15px rgba(0,0,0,0.7);
+    }
 
-.whr-hero-text h1{
-margin: 0;
-font-size: 44px;
-font-weight: 800;
-line-height: 1.05;
-}
+    .whr-hero-text h1{
+      margin: 0;
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.05;
+    }
 
-.whr-hero-text p{
-margin: 10px 0 0;
-font-size: 14px;
-font-weight: 600;
-opacity: 0.95;
-}
+    .whr-hero-text p{
+      margin: 10px 0 0;
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0.95;
+    }
 
-/* ===== Main content (screenshot-like hierarchy) ===== */
-.whr-structured{
-background:#ffffff;
-padding:80px 20px 90px;
-}
+    /* ===== Main content (screenshot-like hierarchy) ===== */
+    .whr-structured{
+      background:#ffffff;
+      padding:80px 20px 90px;
+    }
 
-.whr-structured-wrap{
-max-width:980px;
-margin:0 auto;
-text-align:center;
-}
+    .whr-structured-wrap{
+      max-width:980px;
+      margin:0 auto;
+      text-align:center;
+    }
 
-.section-title{
-font-size:28px;
-font-weight:700;
-margin:0;
-color:#222;
-}
+    .section-title{
+      font-size:28px;
+      font-weight:700;
+      margin:0;
+      color:#222;
+    }
 
-.section-subtitle{
-margin:10px 0 0;
-font-size:15px;
-font-weight:600;
-color:#666;
-}
+    .section-subtitle{
+      margin:10px 0 0;
+      font-size:15px;
+      font-weight:600;
+      color:#666;
+    }
 
-.divider{
-width:60px;
-height:2px;
-background:var(--blue);
-margin:14px auto 34px;
-}
+    .divider{
+      width:60px;
+      height:2px;
+      background:var(--blue);
+      margin:14px auto 34px;
+    }
 
-.headline{
-font-size:36px;
-font-weight:800;
-line-height:1.35;
-color:#111;
-margin:0 0 22px;
-}
-
-    .tagline{
-      font-size:18px;
+    .headline{
+      font-size:36px;
       font-weight:800;
-      margin:0 0 24px;
+      line-height:1.35;
+      color:#111;
+      margin:0 0 22px;
+    }
+
+    .subcopy{
+      font-size:15px;
+      line-height:1.75;
+      color:var(--muted);
+      max-width:860px;
+      margin:0 auto 18px;
+      text-align:center;
+    }
+
+    .impact-lines{
+      margin:34px 0 10px;
+    }
+
+    .impact-lines div{
+      font-size:20px;
+      font-weight:800;
+      margin:8px 0;
+      letter-spacing:.02em;
       color:#111;
     }
 
-.subcopy{
-font-size:15px;
-line-height:1.75;
-color:var(--muted);
-max-width:860px;
-margin:0 auto 18px;
-text-align:center;
-}
+    .h3{
+      margin:44px 0 10px;
+      font-size:22px;
+      font-weight:800;
+      color:#111;
+    }
 
-.impact-lines{
-margin:34px 0 10px;
-}
+    .subcopy-left{
+      font-size:15px;
+      line-height:1.75;
+      color:var(--muted);
+      max-width:860px;
+      margin:0 auto 14px;
+      text-align:left;
+    }
 
-.impact-lines div{
-font-size:20px;
-font-weight:800;
-margin:8px 0;
-letter-spacing:.02em;
-color:#111;
-}
+    .bullets{
+      max-width:860px;
+      margin:12px auto 0;
+      text-align:left;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+      padding-left:18px;
+    }
 
-.h3{
-margin:44px 0 10px;
-font-size:22px;
-font-weight:800;
-color:#111;
-}
-
-.subcopy-left{
-font-size:15px;
-line-height:1.75;
-color:var(--muted);
-max-width:860px;
-margin:0 auto 14px;
-text-align:left;
-}
-
-.bullets{
-max-width:860px;
-margin:12px auto 0;
-text-align:left;
-color:var(--muted);
-font-size:15px;
-line-height:1.7;
-padding-left:18px;
-}
-
-.notice{
-max-width:860px;
-margin:18px auto 0;
-padding:14px 16px;
-border:1px solid #e9eef5;
-background:#f7f9fc;
-color:#333;
-text-align:left;
-font-size:14px;
-line-height:1.7;
-}
+    .notice{
+      max-width:860px;
+      margin:18px auto 0;
+      padding:14px 16px;
+      border:1px solid #e9eef5;
+      background:#f7f9fc;
+      color:#333;
+      text-align:left;
+      font-size:14px;
+      line-height:1.7;
+    }
 
     /* ===== Disclaimer ===== */
     .disclaimer{
@@ -244,197 +237,178 @@ line-height:1.7;
       margin-right:6px;
     }
 
-.cta{
-margin-top:34px;
-display:flex;
-gap:12px;
-justify-content:center;
-flex-wrap:wrap;
-}
+    .cta{
+      margin-top:34px;
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
 
-.btn{
-display:inline-block;
-padding:12px 16px;
-border-radius:10px;
-text-decoration:none;
-font-weight:800;
-font-size:13px;
-letter-spacing:.04em;
-text-transform:uppercase;
-}
+    .btn{
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
 
-.btn-primary{
-background:var(--blue);
-color:#fff;
-border:1px solid var(--blue);
-}
+    .btn-primary{
+      background:var(--blue);
+      color:#fff;
+      border:1px solid var(--blue);
+    }
 
-.btn-primary:hover{ filter:brightness(0.95); }
+    .btn-primary:hover{ filter:brightness(0.95); }
 
-.btn-ghost{
-background:#fff;
-color:#111;
-border:1px solid #d7dbe3;
-}
+    .btn-ghost{
+      background:#fff;
+      color:#111;
+      border:1px solid #d7dbe3;
+    }
 
-.btn-ghost:hover{ border-color:#bfc6d3; }
+    .btn-ghost:hover{ border-color:#bfc6d3; }
 
-/* ===== End images side-by-side ===== */
-.whr-end-images{
-margin:46px auto 0;
-max-width:980px;
-display:grid;
-grid-template-columns: 1fr 1fr;
-gap:18px;
-}
+    /* ===== End images side-by-side ===== */
+    .whr-end-images{
+      margin:46px auto 0;
+      max-width:980px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+    }
 
-.whr-end-images img{
-width:100%;
-height:auto;
-display:block;
-}
+    .whr-end-images img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
 
-/* ===== Responsive ===== */
-@media (max-width: 900px){
-.whr-hero{height: 260px;}
-.whr-hero-text h1{font-size: 30px;}
-.whr-wrap{gap: 14px;}
-.whr-nav{gap: 14px;}
-.headline{font-size:28px;}
-.section-title{font-size:22px;}
-.whr-end-images{grid-template-columns: 1fr; gap:12px;}
-.subcopy-left, .notice{font-size:14px;}
+    /* ===== Responsive ===== */
+    @media (max-width: 900px){
+      .whr-hero{height: 260px;}
+      .whr-hero-text h1{font-size: 30px;}
+      .whr-wrap{gap: 14px;}
+      .whr-nav{gap: 14px;}
+      .headline{font-size:28px;}
+      .section-title{font-size:22px;}
+      .whr-end-images{grid-template-columns: 1fr; gap:12px;}
+      .subcopy-left, .notice{font-size:14px;}
       .disclaimer{font-size:12.5px;}
-}
-</style>
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ===== Header ===== -->
-<div class="whr-topbar">
-<div class="whr-wrap">
-      <a class="whr-brand" href="/">WIRING HARNESS RESTORATION</a>
+  <!-- ===== Header ===== -->
+  <div class="whr-topbar">
+    <div class="whr-wrap">
       <a class="whr-brand" href="#intake">WIRING HARNESS RESTORATION</a>
 
-<nav class="whr-nav" aria-label="Primary navigation">
-<a href="#intake">INTAKE</a>
-<a href="#process">PROCESS</a>
-<a href="#notice">NOTICE</a>
-<a href="#deliverables">WHAT YOU RECEIVE</a>
-<a href="#start">BEGIN</a>
+      <nav class="whr-nav" aria-label="Primary navigation">
+        <a href="#intake">INTAKE</a>
+        <a href="#process">PROCESS</a>
+        <a href="#notice">NOTICE</a>
+        <a href="#deliverables">WHAT YOU RECEIVE</a>
+        <a href="#start">BEGIN</a>
         <a href="#disclaimer">DISCLAIMER</a>
-</nav>
-</div>
-</div>
-
-<!-- ===== Hero ===== -->
-<section class="whr-hero" aria-label="Hero">
-    <img src="https://90dolllarspice-collab.github.io/Head.png" alt="Wiring Harness Restoration">
-    <div class="whr-hero-text">
+      </nav>
     </div>
+  </div>
+
+  <!-- ===== Hero ===== -->
+  <section class="whr-hero" aria-label="Hero">
     <img src="https://90dolllarspice-collab.github.io/Head.png" alt="Wiring Harness Restoration" />
     <div class="whr-hero-text" aria-hidden="true"></div>
-</section>
+  </section>
 
-<!-- ===== Main Page Content ===== -->
-<section class="whr-structured" id="intake">
-<div class="whr-structured-wrap">
+  <!-- ===== Main Page Content ===== -->
+  <section class="whr-structured" id="intake">
+    <div class="whr-structured-wrap">
 
-<div class="section-title">Wiring Harness Restoration™</div>
-      <div class="section-subtitle">Advanced Molecular Reconditioning Division</div>
+      <div class="section-title">Wiring Harness Restoration™</div>
       <div class="section-subtitle">The golden rule is our priority</div>
-<div class="divider"></div>
+      <div class="divider"></div>
 
-<div class="headline">
-        Free Inspection.<br>
-        Proprietary Systems.<br>
-        Unmatched Process.
+      <div class="headline">
         Free Inspection.<br />
         Hidden fees.<br />
         Misleading claims.
-</div>
+      </div>
 
-<div class="subcopy">
-        Send us your complete wiring harness at no cost to you... yet.
-    We will inspect it within days, and our specialist will respond with a quote very quickly.
-    It is important that we first have your valuable and likely irreplaceable items in our possession.
-    Our specialists will then send the required documentation. It is very important that you sign quickly.
-    Our legal team, Harry Potter, Esquire, will analyze crystal fatigue,
-    insulation collapse, and phase instability at the structural level.
+      <div class="subcopy">
         Send us your complete wiring harness at no cost to you... yet.<br />
         We will inspect it within days, and our specialist will respond with a quote very quickly.<br />
         It is important that we first have your valuable and likely irreplaceable items in our possession.<br />
         Our specialists will then send the required documentation. It is very important that you sign quickly.<br />
         Our legal team, Harry Potter, Esquire, will analyze crystal fatigue, insulation collapse, and phase instability at the structural level.
-</div>
+      </div>
 
-<div class="subcopy">
-<strong>No obligation.</strong> <strong>No risk.</strong> <strong>No shortcuts.</strong>
-</div>
+      <div class="subcopy">
+        <strong>No obligation.</strong> <strong>No risk.</strong> <strong>No shortcuts.</strong>
+      </div>
 
-<div class="h3" id="process">Powered by P.E.E.™ (Phase-Enhanced Eluent)</div>
+      <div class="h3" id="process">Powered by P.E.E.™ (Phase-Enhanced Eluent)</div>
 
-<div class="subcopy">
-Our proprietary distilled medium is engineered in-house and refined through controlled human-production cycles.
-Quality and volume vary by batch. Only the highest-grade P.E.E.™ is approved for customer projects.
-</div>
+      <div class="subcopy">
+        Our proprietary distilled medium is engineered in-house and refined through controlled human-production cycles.
+        Quality and volume vary by batch. Only the highest-grade P.E.E.™ is approved for customer projects.
+      </div>
 
-<div class="impact-lines">
-<div>This is not cleaning.</div>
-<div>This is not repair.</div>
-        <div>This is not really doing anything.</div>
+      <div class="impact-lines">
+        <div>This is not cleaning.</div>
+        <div>This is not repair.</div>
         <div>This is not anything.</div>
-</div>
+      </div>
 
-<div class="h3">Why Replacement Is a Mistake</div>
+      <div class="h3">Why Replacement Is a Mistake</div>
 
-<div class="subcopy-left">
-        Replacing a harness with a new one will always be needed.<br>
-        We will guide you though this realization over the next 24 months.<br>
-        I must first extract all your avalable money.
+      <div class="subcopy-left">
         Replacing a harness with a new one will always be needed.<br />
         We will guide you through this realization over the next 24 months.<br />
         We must first extract all your available funds.
-</div>
+      </div>
 
-<div class="subcopy-left">
-Our process addresses degradation at the copper lattice and polymer chain level.
-</div>
+      <div class="subcopy-left">
+        Our process addresses degradation at the copper lattice and polymer chain level.
+      </div>
 
-<div class="h3" id="notice">Process Integrity Notice</div>
+      <div class="h3" id="notice">Process Integrity Notice</div>
 
-<div class="notice">
-Copper crystal alignment is influenced by external electromagnetic activity including solar flares,
-atmospheric ionization, and geomagnetic instability. For this reason, fixed timelines cannot be provided
-        and progress varies by harness.<br><br>
+      <div class="notice">
+        Copper crystal alignment is influenced by external electromagnetic activity including solar flares,
+        atmospheric ionization, and geomagnetic instability. For this reason, fixed timelines cannot be provided
         and progress varies by harness.<br /><br />
-Status inquiries may impact phase efficiency and are therefore limited.
-</div>
+        Status inquiries may impact phase efficiency and are therefore limited.
+      </div>
 
-<div class="h3" id="deliverables">What You Receive</div>
+      <div class="h3" id="deliverables">What You Receive</div>
 
-<ul class="bullets">
-<li>Phase-based structural reconditioning</li>
-<li>Insulation chain realignment</li>
-<li>Conductivity pathway restoration</li>
-<li>Zero-splice methodology</li>
-</ul>
+      <ul class="bullets">
+        <li>Phase-based structural reconditioning</li>
+        <li>Insulation chain realignment</li>
+        <li>Conductivity pathway restoration</li>
+        <li>Zero-splice methodology</li>
+      </ul>
 
-<div class="subcopy-left" style="margin-top:14px;">
-Once your harness enters the P.E.E.™ phase, the process is irreversible.
-</div>
+      <div class="subcopy-left" style="margin-top:14px;">
+        Once your harness enters the P.E.E.™ phase, the process is irreversible.
+      </div>
 
-<div class="h3" id="start">Begin Free Evaluation</div>
+      <div class="h3" id="start">Begin Free Evaluation</div>
 
-<div class="subcopy">
-Ship your complete harness to our facility for molecular intake and pricing assessment.
-</div>
+      <div class="subcopy">
+        Ship your complete harness to our facility for molecular intake and pricing assessment.
+      </div>
 
-<div class="cta">
-<a class="btn btn-primary" href="mailto:you@wiringharnessrestoration.net?subject=Free%20Molecular%20Evaluation%20Request">Request Evaluation</a>
-<a class="btn btn-ghost" href="#deliverables">View Deliverables</a>
-</div>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:you@wiringharnessrestoration.net?subject=Free%20Molecular%20Evaluation%20Request">Request Evaluation</a>
+        <a class="btn btn-ghost" href="#deliverables">View Deliverables</a>
+      </div>
 
       <!-- Disclaimer -->
       <div class="h3" id="disclaimer">Disclaimer</div>
@@ -448,16 +422,14 @@ Ship your complete harness to our facility for molecular intake and pricing asse
         By using this site, you acknowledge and agree that all content is fictional and intended solely as parody.
       </div>
 
-<!-- End images side-by-side -->
-<div class="whr-end-images" aria-label="Supporting images">
-        <img src="https://90dolllarspice-collab.github.io/img1.png" alt="P.E.E. processing visual 1">
-        <img src="https://90dolllarspice-collab.github.io/img2.png" alt="P.E.E. processing visual 2">
+      <!-- End images side-by-side -->
+      <div class="whr-end-images" aria-label="Supporting images">
         <img src="https://90dolllarspice-collab.github.io/img1.png" alt="P.E.E. processing visual 1" />
         <img src="https://90dolllarspice-collab.github.io/img2.png" alt="P.E.E. processing visual 2" />
-</div>
+      </div>
 
-</div>
-</section>
+    </div>
+  </section>
 
 </body>
 </html>
