@@ -21,7 +21,6 @@
       color:var(--text);
     }
 
-    /* ===== Header (top nav) ===== */
     .whr-topbar{
       position: sticky;
       top: 0;
@@ -71,7 +70,6 @@
 
     .whr-nav a:hover{ color: var(--blue); }
 
-    /* ===== Hero ===== */
     .whr-hero{
       position: relative;
       height: 360px;
@@ -106,109 +104,193 @@
       text-shadow: 0 2px 15px rgba(0,0,0,0.7);
     }
 
-    .whr-hero-text h1{
-      margin: 0;
-      font-size: 44px;
-      font-weight: 800;
-      line-height: 1.05;
+    .whr-structured{
+      background:#ffffff;
+      padding:80px 20px 90px;
     }
 
-    .whr-hero-text p{
-      margin: 10px 0 0;
-      font-size: 14px;
-      font-weight: 600;
-      opacity: 0.95;
+    .whr-structured-wrap{
+      max-width:980px;
+      margin:0 auto;
     }
 
-  <section class="hero">
-  <div class="wrap">
-    <p class="kicker">The Only One™ • The Best Ever™ • Trust Us™</p>
+    .kicker{
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:#666;
+      margin:0 0 14px;
+    }
 
-    <h1>Wiring Harness Restoration<br><span class="muted">as performed by a Company With No Relationship to Reality</span></h1>
+    .headline{
+      font-size:44px;
+      font-weight:800;
+      line-height:1.05;
+      margin:0 0 18px;
+      color:#111;
+    }
 
-    <p class="sub">
-      We are the <strong>only</strong> company on Earth that “truly restores” wiring harnesses.
-      Everyone else is wrong. Our process is proprietary, perfect, and conveniently unmeasurable.
-      We have had <strong>zero</strong> warranty claims, because we define “claim” as “anything we acknowledge.”
-    </p>
+    .muted{
+      color:#666;
+      font-weight:600;
+    }
 
-    <div class="grid">
-      <div class="card">
-        <h2>The Promise</h2>
-        <ul>
-          <li><strong>Fast timeline</strong> (until you ship it)</li>
-          <li><strong>Low estimate</strong> (until we possess it)</li>
-          <li><strong>Lifetime warranty</strong> (lifetime of our interest)</li>
-          <li><strong>Industry standard</strong> (we are the industry)</li>
-        </ul>
-      </div>
+    .sub{
+      max-width:70ch;
+      font-size:18px;
+      line-height:1.6;
+      color:#222;
+      margin:0 0 32px;
+    }
 
-      <div class="card">
-        <h2>The Process</h2>
-        <ol>
-          <li><strong>Hook:</strong> “6–8 weeks. Great price.”</li>
-          <li><strong>Hold:</strong> harness arrives → leverage achieved.</li>
-          <li><strong>Upsell:</strong> surprise options appear.</li>
-          <li><strong>Time Warp:</strong> weeks → months → “cycles.”</li>
-          <li><strong>Silence:</strong> updates become philosophical.</li>
-          <li><strong>Reframe:</strong> questions = “attitude.”</li>
-          <li><strong>Pressure:</strong> fees materialize.</li>
-          <li><strong>Victory:</strong> done when we decide.</li>
-        </ol>
-      </div>
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin:26px 0 30px;
+    }
+
+    .card{
+      border:1px solid #e6e6e6;
+      border-radius:14px;
+      padding:18px 18px 16px;
+    }
+
+    .card h2{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    ul,ol{
+      margin:0;
+      padding-left:18px;
+      color:#111;
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    li{ margin:8px 0; }
+
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      border:1px solid #111;
+      color:#fff;
+      background:#111;
+    }
+
+    .btn.ghost{
+      background:#fff;
+      color:#111;
+      border-color:#bbb;
+    }
+
+    .fine{
+      max-width:80ch;
+      margin:18px 0 0;
+      font-size:12px;
+      line-height:1.7;
+      color:#555;
+    }
+
+    @media (max-width: 900px){
+      .whr-hero{height: 260px;}
+      .headline{font-size:30px;}
+      .grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="whr-topbar">
+    <div class="whr-wrap">
+      <a class="whr-brand" href="#intake">WIRING HARNESS RESTORATION</a>
+      <nav class="whr-nav" aria-label="Primary navigation">
+        <a href="#intake">INTAKE</a>
+        <a href="#process">PROCESS</a>
+        <a href="#notice">NOTICE</a>
+        <a href="#deliverables">WHAT YOU RECEIVE</a>
+        <a href="#start">BEGIN</a>
+        <a href="#disclaimer">DISCLAIMER</a>
+      </nav>
     </div>
-
-    <div class="cta">
-      <a class="btn" href="#learn">Learn More About Our “Process”</a>
-      <a class="btn ghost" href="#fineprint">Read the Fine Print That Changes Everything</a>
-    </div>
-
-    <p class="fine" id="fineprint">
-      Fine print: timelines are estimates; estimates are vibes; vibes are non-binding.
-      Storage fees may appear spontaneously. Complaints may trigger additional “administrative time.”
-      Updates available by email only, if deemed deserved. Perfection claims for marketing purposes only.
-    </p>
   </div>
-</section>
 
-<style>
-  .hero{padding:64px 16px;background:#fff;color:#111;font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
-  .wrap{max-width:980px;margin:0 auto;}
-  .kicker{letter-spacing:.08em;text-transform:uppercase;font-size:12px;color:#555;margin:0 0 10px;}
-  h1{font-size:44px;line-height:1.05;margin:0 0 14px;font-weight:800;}
-  .muted{color:#666;font-weight:650;}
-  .sub{max-width:70ch;margin:0 0 26px;font-size:18px;color:#222;}
-  .grid{display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0 26px;}
-  .card{border:1px solid #e6e6e6;border-radius:14px;padding:16px 16px 14px;}
-  h2{margin:0 0 10px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#444;}
-  ul,ol{margin:0;padding-left:18px;color:#111;}
-  li{margin:8px 0;}
-  .cta{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 14px;}
-  .btn{display:inline-block;padding:10px 14px;border-radius:999px;border:1px solid #111;background:#111;color:#fff;text-decoration:none;font-weight:650;}
-  .btn.ghost{background:#fff;color:#111;border-color:#bbb;}
-  .fine{max-width:80ch;margin:10px 0 0;color:#555;font-size:12px}
-  @media(min-width:860px){
-    .grid{grid-template-columns:1fr 1fr;}
-  }
-</style>
+  <section class="whr-hero" aria-label="Hero">
+    <img src="https://90dolllarspice-collab.github.io/Head.png" alt="Wiring Harness Restoration" />
+    <div class="whr-hero-text" aria-hidden="true"></div>
+  </section>
 
-      <!-- Disclaimer -->
-      <div class="h3" id="disclaimer">Disclaimer</div>
-      <div class="disclaimer">
-        <strong>Disclaimer:</strong>
-        This website, its content, services, descriptions, and processes are works of fiction created for satirical and entertainment purposes only.
-        All companies, methods, technologies, products, and claims described on this site are entirely fabricated and do not represent real services,
-        real scientific processes, or real businesses. Any resemblance to actual persons, companies, or services—living or dead—is purely coincidental.
-        All images, graphics, and artwork displayed on this site are generated using artificial intelligence and are not photographs of real people,
-        facilities, or products. Nothing on this site should be interpreted as technical advice, professional guidance, or a legitimate service offering.
-        By using this site, you acknowledge and agree that all content is fictional and intended solely as parody.
+  <!-- ===== Brutal Minimalist Parody Hero Content ===== -->
+  <section class="whr-structured" id="intake">
+    <div class="whr-structured-wrap">
+
+      <p class="kicker">The Only One™ • The Best Ever™ • Trust Us™</p>
+
+      <h1 class="headline">
+        Wiring Harness Restoration<br>
+        <span class="muted">as performed by a Company With No Relationship to Reality</span>
+      </h1>
+
+      <p class="sub">
+        We are the <strong>only</strong> company on Earth that “truly restores” wiring harnesses.
+        Everyone else is wrong. Our process is proprietary, perfect, and conveniently unmeasurable.
+        We have had <strong>zero</strong> warranty claims, because we define “claim” as “anything we acknowledge.”
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h2>The Promise</h2>
+          <ul>
+            <li><strong>Fast timeline</strong> (until you ship it)</li>
+            <li><strong>Low estimate</strong> (until we possess it)</li>
+            <li><strong>Lifetime warranty</strong> (lifetime of our interest)</li>
+            <li><strong>Industry standard</strong> (we are the industry)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>The Process</h2>
+          <ol>
+            <li><strong>Hook:</strong> “6–8 weeks. Great price.”</li>
+            <li><strong>Hold:</strong> harness arrives → leverage achieved.</li>
+            <li><strong>Upsell:</strong> surprise options appear.</li>
+            <li><strong>Time Warp:</strong> weeks → months → “cycles.”</li>
+            <li><strong>Silence:</strong> updates become philosophical.</li>
+            <li><strong>Reframe:</strong> questions = “attitude.”</li>
+            <li><strong>Pressure:</strong> fees materialize.</li>
+            <li><strong>Victory:</strong> done when we decide.</li>
+          </ol>
+        </div>
       </div>
 
-      <!-- End images side-by-side -->
-      <div class="whr-end-images" aria-label="Supporting images">
-        <img src="https://90dolllarspice-collab.github.io/img1.png" alt="P.E.E. processing visual 1" />
-        <img src="https://90dolllarspice-collab.github.io/img2.png" alt="P.E.E. processing visual 2" />
+      <div class="cta">
+        <a class="btn" href="#learn">Learn More About Our “Process”</a>
+        <a class="btn ghost" href="#fineprint">Read the Fine Print That Changes Everything</a>
       </div>
+
+      <p class="fine" id="fineprint">
+        Fine print: timelines are estimates; estimates are vibes; vibes are non-binding.
+        Storage fees may appear spontaneously. Complaints may trigger additional “administrative time.”
+        Updates available by email only, if deemed deserved. Perfection claims for marketing purposes only.
+      </p>
 
     </div>
   </section>
