@@ -224,6 +224,46 @@
       border-radius:14px;
     }
 
+    /* Review reaction block */
+    .review-block{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+      margin:50px 0 0;
+      padding-top:26px;
+      border-top:1px solid #eee;
+    }
+
+    .review-block img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+      border:1px solid #e6e6e6;
+    }
+
+    .review-text{
+      border:1px solid #e6e6e6;
+      border-radius:14px;
+      padding:18px 18px 16px;
+    }
+
+    .review-text h3{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    .review-text p{
+      margin:0;
+      font-size:15px;
+      line-height:1.75;
+      color:#111;
+    }
+
     /* Disclaimer */
     .disclaimer{
       margin:70px 0 0;
@@ -245,6 +285,7 @@
       .headline{font-size:30px;}
       .grid{grid-template-columns:1fr;}
       .image-row{grid-template-columns:1fr;}
+      .review-block{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -270,7 +311,6 @@
     <div class="whr-hero-text" aria-hidden="true"></div>
   </section>
 
-  <!-- ===== Brutal Minimalist Parody Hero Content ===== -->
   <section class="whr-structured" id="intake">
     <div class="whr-structured-wrap">
 
@@ -287,7 +327,7 @@
         We have had <strong>zero</strong> warranty claims, because we define “claim” as “anything we acknowledge.”
       </p>
 
-      <div class="grid">
+      <div class="grid" id="process">
         <div class="card">
           <h2>The Promise</h2>
           <ul>
@@ -313,7 +353,7 @@
         </div>
       </div>
 
-      <div class="cta">
+      <div class="cta" id="start">
         <a class="btn" href="#learn">Learn More About Our “Process”</a>
         <a class="btn ghost" href="#fineprint">Read the Fine Print That Changes Everything</a>
       </div>
@@ -325,9 +365,26 @@
       </p>
 
       <!-- ===== Images ===== -->
-      <div class="image-row">
+      <div class="image-row" id="deliverables">
         <img src="https://90dolllarspice-collab.github.io/img1.png" alt="Processing visualization 1">
         <img src="https://90dolllarspice-collab.github.io/img2.png" alt="Processing visualization 2">
+      </div>
+
+      <!-- ===== Review Screenshot + Reaction ===== -->
+      <div class="review-block" id="notice">
+        <img src="https://90dolllarspice-collab.github.io/img5.png" alt="Screenshot of review / owner response">
+
+        <div class="review-text">
+          <h3>Public Reply Analysis</h3>
+          <p>
+            This response is unprofessional, defensive, and self-sabotaging. Instead of addressing the complaint,
+            you attack the customer, make unprovable accusations, rant about the BBB, and air legal threats in public.
+            You also contradict yourself by claiming a “lifetime warranty” while boasting about “zero warranty claims,”
+            which raises serious questions about whether customers can actually use your warranty at all. It reads like
+            a personal meltdown, not a business reply. Even if the customer is wrong, your response makes you look volatile,
+            unaccountable, and risky to deal with. You did more damage to your reputation than the original review ever could.
+          </p>
+        </div>
       </div>
 
       <!-- ===== Disclaimer ===== -->
