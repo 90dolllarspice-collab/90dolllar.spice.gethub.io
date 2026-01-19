@@ -6,6 +6,9 @@
   <title>Wiring harness Restoration</title>
 
   <style>
+    /* =========================================================
+       Tokens / Base
+    ========================================================= */
     :root{
       --blue:#1b74e4;
       --text:#111;
@@ -21,6 +24,19 @@
       color:var(--text);
     }
 
+    ul,ol{
+      margin:0;
+      padding-left:18px;
+      color:#111;
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    li{ margin:8px 0; }
+
+    /* =========================================================
+       Top Bar / Nav
+    ========================================================= */
     .whr-topbar{
       position: sticky;
       top: 0;
@@ -55,7 +71,7 @@
       gap: 22px;
       flex-wrap: wrap;
       justify-content: center;
-      align-items:center;
+      align-items: center;
     }
 
     .whr-nav a{
@@ -70,6 +86,9 @@
 
     .whr-nav a:hover{ color: var(--blue); }
 
+    /* =========================================================
+       Hero
+    ========================================================= */
     .whr-hero{
       position: relative;
       height: 360px;
@@ -96,6 +115,9 @@
       background: rgba(0,0,0,0.35);
     }
 
+    /* =========================================================
+       Structured Section / Typography
+    ========================================================= */
     .whr-structured{
       background:#ffffff;
       padding:80px 20px 90px;
@@ -135,6 +157,17 @@
       margin:0 0 32px;
     }
 
+    .fine{
+      max-width:80ch;
+      margin:18px 0 0;
+      font-size:12px;
+      line-height:1.7;
+      color:#555;
+    }
+
+    /* =========================================================
+       Layout Blocks
+    ========================================================= */
     .grid{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -155,16 +188,6 @@
       text-transform:uppercase;
       color:#444;
     }
-
-    ul,ol{
-      margin:0;
-      padding-left:18px;
-      color:#111;
-      font-size:15px;
-      line-height:1.7;
-    }
-
-    li{ margin:8px 0; }
 
     .cta{
       display:flex;
@@ -193,14 +216,6 @@
       border-color:#bbb;
     }
 
-    .fine{
-      max-width:80ch;
-      margin:18px 0 0;
-      font-size:12px;
-      line-height:1.7;
-      color:#555;
-    }
-
     .image-row{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -215,6 +230,9 @@
       border-radius:14px;
     }
 
+    /* =========================================================
+       Reviews
+    ========================================================= */
     .review-block{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -254,7 +272,9 @@
       color:#111;
     }
 
-    /* Case Summary */
+    /* =========================================================
+       Case Summary
+    ========================================================= */
     .case-summary{
       margin:60px 0 0;
       padding-top:26px;
@@ -284,7 +304,9 @@
       line-height:1.6;
     }
 
-    /* Downloads */
+    /* =========================================================
+       Downloads
+    ========================================================= */
     .downloads{
       margin:60px 0 0;
       padding-top:26px;
@@ -324,9 +346,7 @@
       background:#fff;
     }
 
-    .dl .meta{
-      min-width:0;
-    }
+    .dl .meta{ min-width:0; }
 
     .dl .title{
       font-weight:800;
@@ -360,6 +380,9 @@
 
     .dl a:hover{ filter:brightness(.95); }
 
+    /* =========================================================
+       Disclaimer
+    ========================================================= */
     .disclaimer{
       margin:70px 0 0;
       padding:18px 20px;
@@ -375,22 +398,28 @@
       margin-bottom:6px;
     }
 
+    /* =========================================================
+       Responsive
+    ========================================================= */
     @media (max-width: 900px){
-      .whr-hero{height: 260px;}
-      .headline{font-size:30px;}
-      .grid{grid-template-columns:1fr;}
-      .image-row{grid-template-columns:1fr;}
-      .review-block{grid-template-columns:1fr;}
-      .dl-grid{grid-template-columns:1fr;}
+      .whr-hero{ height: 260px; }
+      .headline{ font-size:30px; }
+      .grid{ grid-template-columns:1fr; }
+      .image-row{ grid-template-columns:1fr; }
+      .review-block{ grid-template-columns:1fr; }
+      .dl-grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
 
 <body>
-
-  <div class="whr-topbar">
+  <!-- =======================================================
+       Top Bar
+  ======================================================= -->
+  <header class="whr-topbar" role="banner">
     <div class="whr-wrap">
       <a class="whr-brand" href="#intake">Wiring harness Restoration</a>
+
       <nav class="whr-nav" aria-label="Primary navigation">
         <a href="#intake">INTAKE</a>
         <a href="#process">PROCESS</a>
@@ -402,36 +431,45 @@
         <a href="#disclaimer">DISCLAIMER</a>
       </nav>
     </div>
-  </div>
+  </header>
 
+  <!-- =======================================================
+       Hero
+  ======================================================= -->
   <section class="whr-hero" aria-label="Hero">
     <img src="https://90dolllarspice-collab.github.io/Head.png" alt="Wiring harness Restoration" />
   </section>
 
-  <section class="whr-structured" id="intake">
+  <!-- =======================================================
+       Intake / Main Content
+  ======================================================= -->
+  <main class="whr-structured" id="intake">
     <div class="whr-structured-wrap">
 
       <p class="kicker">Scam Alart™ • Shit Person™ • Lier™</p>
 
       <h1 class="headline">
-        Wiring harness Restoration<br>
+        Wiring harness Restoration<br />
         <span class="muted">lowest form of human existence</span>
       </h1>
 
       <p class="sub">
-The sole purpose of this site is to warn potential future customers about a scheme crafted by a Utah resident named Darren Flit. He operates a business called Wiring Harness Restoration, which is designed around taking possession of one-of-a-kind or rare items, such as automotive wiring harnesses. He claims to restore these harnesses using a process he calls “deoxidation,” which is supposedly intended to restore wire conductivity and somehow bring the harnesses back to life.
-This process is entirely fabricated. It is not a real or recognized practice. Automotive wiring harnesses are not repaired by “deoxidizing” them, nor does anyone solder pins back onto harnesses in the manner implied. That is not how automotive electrical systems work.
-The purpose of inventing this so-called deoxidation process is to introduce an unknown and unverifiable variable into the work. It provides a convenient explanation for excessively long timelines, since no customer can independently verify whether this process is occurring. There is no established standard for it. Because the business is marketed as “restoration,” he can claim that customers are paying specifically for this undefined process and argue that if it takes up to two years to “deoxidize” a harness, it is beyond his control—asserting that this is what the customer agreed to.
-Customers typically enter into this arrangement believing they are paying for a repair. His website strongly implies that this is the service being offered, but that is not the reality. Early on, he suggests the work may take only a few weeks and performs the initial inspection very quickly, often within days. However, once the customer signs the contract—containing language buried in the middle that allows the process to take up to two years—they are bound by terms they would not reasonably expect from a company that was able to provide a prompt inspection and estimate.
+        The sole purpose of this site is to warn potential future customers about a scheme crafted by a Utah resident named Darren Flit. He operates a business called Wiring Harness Restoration, which is designed around taking possession of one-of-a-kind or rare items, such as automotive wiring harnesses. He claims to restore these harnesses using a process he calls “deoxidation,” which is supposedly intended to restore wire conductivity and somehow bring the harnesses back to life.
+        This process is entirely fabricated. It is not a real or recognized practice. Automotive wiring harnesses are not repaired by “deoxidizing” them, nor does anyone solder pins back onto harnesses in the manner implied. That is not how automotive electrical systems work.
+        The purpose of inventing this so-called deoxidation process is to introduce an unknown and unverifiable variable into the work. It provides a convenient explanation for excessively long timelines, since no customer can independently verify whether this process is occurring. There is no established standard for it. Because the business is marketed as “restoration,” he can claim that customers are paying specifically for this undefined process and argue that if it takes up to two years to “deoxidize” a harness, it is beyond his control—asserting that this is what the customer agreed to.
+        Customers typically enter into this arrangement believing they are paying for a repair. His website strongly implies that this is the service being offered, but that is not the reality. Early on, he suggests the work may take only a few weeks and performs the initial inspection very quickly, often within days. However, once the customer signs the contract—containing language buried in the middle that allows the process to take up to two years—they are bound by terms they would not reasonably expect from a company that was able to provide a prompt inspection and estimate.
       </p>
 
-      <div class="grid" id="process">
+      <!-- ===================================================
+           Process
+      =================================================== -->
+      <section class="grid" id="process" aria-label="Process">
         <div class="card">
           <h2>⚠️ CONSUMER WARNING: READ BEFORE SENDING YOUR HARNESS</h2>
           <ul>
-            <li>We are the only company in the world that truly has such low ethical and moral principles that we will not only take your harness and your money, but also lie to you, threaten you, and render whatever vehicle you care about enough to want to fix for two years. We do not care that our business is based on trapping people. We have had zero warranty claims, because we have never had anything to warranty. They are not restoring wiring harnesses the way OEMs do. They are restoring customer confidence over time, using oxidation as the story that makes waiting feel necessary.”
-
-</li>
+            <li>
+              We are the only company in the world that truly has such low ethical and moral principles that we will not only take your harness and your money, but also lie to you, threaten you, and render whatever vehicle you care about enough to want to fix for two years. We do not care that our business is based on trapping people. We have had zero warranty claims, because we have never had anything to warranty. They are not restoring wiring harnesses the way OEMs do. They are restoring customer confidence over time, using oxidation as the story that makes waiting feel necessary.”
+            </li>
           </ul>
         </div>
 
@@ -445,12 +483,14 @@ Customers typically enter into this arrangement believing they are paying for a 
             <li>States solder joints are “resistance-free,” despite all solder joints having measurable resistance and altered flex behavior.</li>
             <li>Markets its work as “restoration,” while cutting off terminals, grafting wires, soldering joints, and substituting connectors—actions that constitute rework or rebuild, not restoration.</li>
             <li>The contract restricts public discussion and penalizes chargebacks, despite consumer review and dispute rights being protected by law.</li>
-      
           </ol>
         </div>
-      </div>
+      </section>
 
-      <div class="cta" id="start">
+      <!-- ===================================================
+           CTA + Fine Print
+      =================================================== -->
+      <div class="cta">
         <a class="btn" href="#learn">Learn More About Our “Process”</a>
         <a class="btn ghost" href="#fineprint">Read the Fine Print That Changes Everything</a>
       </div>
@@ -461,17 +501,22 @@ Customers typically enter into this arrangement believing they are paying for a 
         Updates available by email only, if deemed deserved. Perfection claims for marketing purposes only.
       </p>
 
-      <div class="image-row" id="deliverables">
-        <img src="https://90dolllarspice-collab.github.io/img1.png" alt="Processing visualization 1">
-        <img src="https://90dolllarspice-collab.github.io/img2.png" alt="Processing visualization 2">
-      </div>
+      <!-- ===================================================
+           Deliverables Images
+      =================================================== -->
+      <section class="image-row" id="deliverables" aria-label="Deliverables images">
+        <img src="https://90dolllarspice-collab.github.io/img1.png" alt="Processing visualization 1" />
+        <img src="https://90dolllarspice-collab.github.io/img2.png" alt="Processing visualization 2" />
+      </section>
 
-      <!-- ========= CASE SUMMARY (moved ABOVE downloads/reviews) ========= -->
-      <div class="case-summary" id="case">
+      <!-- ===================================================
+           Case Summary (Original)
+      =================================================== -->
+      <section class="case-summary" id="case" aria-label="Case summary">
         <h2>Case Summary (Utah Division of Consumer Protection)</h2>
 
         <p class="meta">
-          Subject: Doofus Squint; , LLC (dba Wiring harness Retardation); Harry Potter Esquire, LLC.<br>
+          Subject: Doofus Squint; , LLC (dba Wiring harness Retardation); Harry Potter Esquire, LLC.<br />
           DCP Legal File No. CP-2017-093.
         </p>
 
@@ -495,10 +540,12 @@ Customers typically enter into this arrangement believing they are paying for a 
         <p class="fine">
           Source documents: Utah Division of Consumer Protection Administrative Citation (Dec 2017) and Settlement Agreement (Mar 2018).
         </p>
-      </div>
+      </section>
 
-      <!-- ========= DOWNLOADS (stays after case summary) ========= -->
-      <div class="downloads" id="downloads">
+      <!-- ===================================================
+           Downloads (Original)
+      =================================================== -->
+      <section class="downloads" id="downloads" aria-label="Downloads">
         <h2>Downloads</h2>
         <p>
           Two public documents are available for direct download (PDF). These are provided as-source material for parody and commentary.
@@ -525,87 +572,92 @@ Customers typically enter into this arrangement believing they are paying for a 
         <p class="fine" style="margin-top:12px;">
           Note: Some browsers may open PDFs in a new tab depending on user settings; the “download” attribute requests a direct download.
         </p>
-      </div>
+      </section>
 
-      <!-- ========= REVIEWS (moved AFTER downloads) ========= -->
-      <!-- ========= CASE SUMMARY (moved ABOVE downloads/reviews) ========= -->
-<div class="case-summary" id="case">
-  <h2>Case Summary (Public Records Snapshot)</h2>
+      <!-- ===================================================
+           Case Summary (Public Records Snapshot) - Duplicate ID fixed
+      =================================================== -->
+      <section class="case-summary" id="case-public" aria-label="Case summary (public records snapshot)">
+        <h2>Case Summary (Public Records Snapshot)</h2>
 
-  <p class="meta">
-    Subject: Doofus Squint (operator); a wiring-harness shop (name omitted); related entities (names omitted).<br>
-    Jurisdiction referenced in filings: a Utah municipal justice court and a Utah consumer-protection agency.
-  </p>
+        <p class="meta">
+          Subject: Doofus Squint (operator); a wiring-harness shop (name omitted); related entities (names omitted).<br />
+          Jurisdiction referenced in filings: a Utah municipal justice court and a Utah consumer-protection agency.
+        </p>
 
-  <p class="fine" style="font-weight:800; color:#a33;">
-    Allegations summarized from court filings. Not findings of fact. Not verified by this site.
-  </p>
+        <p class="fine" style="font-weight:800; color:#a33;">
+          Allegations summarized from court filings. Not findings of fact. Not verified by this site.
+        </p>
 
-  <p>
-    The public documents linked below include a “return of service” form filed with a Utah court and a written message
-    sent to the court by the opposing party. These materials are presented for commentary and criticism and have been
-    anonymized to avoid publishing personal information.
-  </p>
+        <p>
+          The public documents linked below include a “return of service” form filed with a Utah court and a written message
+          sent to the court by the opposing party. These materials are presented for commentary and criticism and have been
+          anonymized to avoid publishing personal information.
+        </p>
 
-  <p>
-    In the court filing, the process server states that legal papers were delivered at an alternate address after the
-    recipient did not accept service directly. The form reflects that the court received the filing in early 2018.
-  </p>
+        <p>
+          In the court filing, the process server states that legal papers were delivered at an alternate address after the
+          recipient did not accept service directly. The form reflects that the court received the filing in early 2018.
+        </p>
 
-  <p>
-    In the court message, the writer asks for more time to respond and describes a dispute over a wiring-harness job,
-    including price paid, delays, and return/refund concerns. The message also alleges hostile communications and
-    retaliation connected to the dispute. These are the writer’s statements within the filing.
-  </p>
+        <p>
+          In the court message, the writer asks for more time to respond and describes a dispute over a wiring-harness job,
+          including price paid, delays, and return/refund concerns. The message also alleges hostile communications and
+          retaliation connected to the dispute. These are the writer’s statements within the filing.
+        </p>
 
-  <p class="fine">
-    This section is a non-identifying summary only. No real names, addresses, phone numbers, emails, barcodes, case IDs,
-    or business names are reproduced here.
-  </p>
-</div>
+        <p class="fine">
+          This section is a non-identifying summary only. No real names, addresses, phone numbers, emails, barcodes, case IDs,
+          or business names are reproduced here.
+        </p>
+      </section>
 
-<!-- ========= DOWNLOADS (stays after case summary) ========= -->
-<div class="downloads" id="downloads">
-  <h2>Downloads</h2>
-  <p>
-    Source materials are provided as PDFs for commentary and criticism. Sensitive details have been omitted from the site text.
-  </p>
+      <!-- ===================================================
+           Downloads (Docs 1-3) - Duplicate ID fixed
+      =================================================== -->
+      <section class="downloads" id="downloads-court" aria-label="Downloads (court docs)">
+        <h2>Downloads</h2>
+        <p>
+          Source materials are provided as PDFs for commentary and criticism. Sensitive details have been omitted from the site text.
+        </p>
 
-  <div class="dl-grid">
-    <div class="dl">
-      <div class="meta">
-        <div class="title">Doc 1 (PDF)</div>
-        <p class="desc">Court filing: return of service (anonymized summary on-page).</p>
-      </div>
-      <a href="doc1.pdf" download>Download</a>
-    </div>
+        <div class="dl-grid">
+          <div class="dl">
+            <div class="meta">
+              <div class="title">Doc 1 (PDF)</div>
+              <p class="desc">Court filing: return of service (anonymized summary on-page).</p>
+            </div>
+            <a href="doc1.pdf" download>Download</a>
+          </div>
 
-    <div class="dl">
-      <div class="meta">
-        <div class="title">Doc 2 (PDF)</div>
-        <p class="desc">Court filing: return of service (duplicate copy / alternate scan).</p>
-      </div>
-      <a href="Doc2 (3).pdf" download>Download</a>
-    </div>
+          <div class="dl">
+            <div class="meta">
+              <div class="title">Doc 2 (PDF)</div>
+              <p class="desc">Court filing: return of service (duplicate copy / alternate scan).</p>
+            </div>
+            <a href="Doc2 (3).pdf" download>Download</a>
+          </div>
 
-    <div class="dl">
-      <div class="meta">
-        <div class="title">Doc 3 (PDF)</div>
-        <p class="desc">Message to the court requesting more time and describing allegations in the dispute.</p>
-      </div>
-      <a href="doc3.pdf" download>Download</a>
-    </div>
-  </div>
+          <div class="dl">
+            <div class="meta">
+              <div class="title">Doc 3 (PDF)</div>
+              <p class="desc">Message to the court requesting more time and describing allegations in the dispute.</p>
+            </div>
+            <a href="doc3.pdf" download>Download</a>
+          </div>
+        </div>
 
-  <p class="fine" style="margin-top:12px;">
-    Note: Some browsers may open PDFs in a new tab depending on user settings; the “download” attribute requests a direct download.
-  </p>
-</div>
+        <p class="fine" style="margin-top:12px;">
+          Note: Some browsers may open PDFs in a new tab depending on user settings; the “download” attribute requests a direct download.
+        </p>
+      </section>
 
-      <div id="reviews">
-        <!-- Review 1 -->
+      <!-- ===================================================
+           Reviews
+      =================================================== -->
+      <section id="reviews" aria-label="Reviews">
         <div class="review-block" id="notice">
-          <img src="https://90dolllarspice-collab.github.io/img5.png" alt="Screenshot of review / owner response">
+          <img src="https://90dolllarspice-collab.github.io/img5.png" alt="Screenshot of review / owner response" />
           <div class="review-text">
             <h3>Public Reply Analysis</h3>
             <p>
@@ -619,9 +671,8 @@ Customers typically enter into this arrangement believing they are paying for a 
           </div>
         </div>
 
-        <!-- Review 2 -->
         <div class="review-block">
-          <img src="https://90dolllarspice-collab.github.io/img6.png" alt="Screenshot of review / owner response">
+          <img src="https://90dolllarspice-collab.github.io/img6.png" alt="Screenshot of review / owner response" />
           <div class="review-text">
             <h3>Public Reply Analysis</h3>
             <p>
@@ -635,9 +686,8 @@ Customers typically enter into this arrangement believing they are paying for a 
           </div>
         </div>
 
-        <!-- Review 3 -->
         <div class="review-block">
-          <img src="https://90dolllarspice-collab.github.io/img4.png" alt="Screenshot of review / owner response">
+          <img src="https://90dolllarspice-collab.github.io/img4.png" alt="Screenshot of review / owner response" />
           <div class="review-text">
             <h3>Public Reply Analysis</h3>
             <p>
@@ -653,10 +703,12 @@ Customers typically enter into this arrangement believing they are paying for a 
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- ========= DISCLAIMER (last) ========= -->
-      <div class="disclaimer" id="disclaimer">
+      <!-- ===================================================
+           Disclaimer
+      =================================================== -->
+      <footer class="disclaimer" id="disclaimer" aria-label="Disclaimer">
         <strong>Disclaimer</strong>
         This website, its content, services, descriptions, and processes are works of fiction created for satirical and entertainment purposes only.
         All companies, methods, technologies, products, and claims described on this site are entirely fabricated and do not represent real services,
@@ -664,10 +716,9 @@ Customers typically enter into this arrangement believing they are paying for a 
         All images, graphics, and artwork displayed on this site are generated using artificial intelligence and are not photographs of real people,
         facilities, or products. Nothing on this site should be interpreted as technical advice, professional guidance, or a legitimate service offering.
         By using this site, you acknowledge and agree that all content is fictional and intended solely as parody.
-      </div>
+      </footer>
 
     </div>
-  </section>
-
+  </main>
 </body>
 </html>
