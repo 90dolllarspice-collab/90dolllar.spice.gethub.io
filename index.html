@@ -3,225 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wiring Harness Restoration — Consumer Warning</title>
-  <meta name="description" content="A consumer warning site documenting high-risk specialty service patterns in wiring harness restoration claims." />
+  <title>Wiring harness Restoration</title>
 
   <style>
     :root{
       --blue:#1b74e4;
       --text:#111;
-      --muted:#555;
+      --muted:#444;
       --line:#e6e6e6;
-      --bg:#fff;
-      --soft:#fafafa;
-      --warn:#a33;
       --max:1200px;
-      --content:980px;
-      --radius:14px;
-      --shadow:0 10px 30px rgba(0,0,0,.06);
     }
 
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.5;
-    }
-    img{ max-width:100%; height:auto; display:block; }
-    a{ color:inherit; }
-    .container{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 20px;
-    }
-    .content{
-      max-width:var(--content);
-      margin:0 auto;
-    }
-    .sr-only{
-      position:absolute!important;
-      width:1px;height:1px;
-      padding:0;margin:-1px;
-      overflow:hidden;clip:rect(0,0,0,0);
-      white-space:nowrap;border:0;
-    }
-
-    /* Topbar */
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:1000;
       background:#fff;
-      border-bottom:1px solid var(--line);
-      backdrop-filter:saturate(1.2) blur(6px);
+      color:var(--text);
     }
-    .topbar-inner{
-      padding:14px 0;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-    .brand{
-      font-size:13px;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:var(--blue);
-      text-decoration:none;
-      white-space:nowrap;
-    }
-    .nav{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:flex-end;
-    }
-    .nav a{
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:.05em;
-      text-transform:uppercase;
-      text-decoration:none;
-      padding:6px 2px;
-      color:#111;
-      border-bottom:2px solid transparent;
-    }
-    .nav a:hover{ color:var(--blue); border-bottom-color:rgba(27,116,228,.25); }
 
-    /* Hero */
-    .hero{
-      position:relative;
-      min-height:340px;
-      background:#000;
-      overflow:hidden;
+    .whr-topbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
     }
-    .hero-media{
-      position:absolute;
-      inset:0;
+
+    .whr-wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
     }
-    .hero-media img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      opacity:.92;
+
+    .whr-brand{
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      text-decoration: none;
+      white-space: nowrap;
     }
-    .hero::after{
+
+    .whr-nav{
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items:center;
+    }
+
+    .whr-nav a{
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: #111;
+      text-decoration: none;
+      padding: 6px 2px;
+    }
+
+    .whr-nav a:hover{ color: var(--blue); }
+
+    .whr-hero{
+      position: relative;
+      height: 360px;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+    }
+
+    .whr-hero img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .whr-hero::after{
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25));
-      pointer-events:none;
+      background: rgba(0,0,0,0.35);
     }
-    .hero-inner{
-      position:relative;
-      padding:54px 0 44px;
-      color:#fff;
+
+    .whr-structured{
+      background:#ffffff;
+      padding:80px 20px 90px;
     }
+
+    .whr-structured-wrap{
+      max-width:980px;
+      margin:0 auto;
+    }
+
     .kicker{
       letter-spacing:.12em;
       text-transform:uppercase;
       font-size:12px;
-      color:rgba(255,255,255,.85);
+      color:#666;
       margin:0 0 14px;
-      font-weight:700;
     }
+
     .headline{
       font-size:44px;
-      font-weight:900;
+      font-weight:800;
       line-height:1.05;
-      margin:0 0 14px;
+      margin:0 0 18px;
+      color:#111;
     }
-    .subhead{
-      max-width:75ch;
-      font-size:18px;
-      line-height:1.65;
-      margin:0;
-      color:rgba(255,255,255,.92);
+
+    .muted{
+      color:#666;
       font-weight:600;
     }
 
-    /* Main */
-    main{
-      padding:70px 0 90px;
-    }
-    section{
-      padding-top:26px;
-      margin-top:40px;
-      border-top:1px solid var(--line);
-    }
-    section:first-of-type{
-      padding-top:0;
-      margin-top:0;
-      border-top:none;
-    }
-    .section-title{
-      margin:0 0 10px;
-      font-size:13px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:#444;
-      font-weight:800;
-    }
-    .lead{
-      margin:0 0 18px;
+    .sub{
+      max-width:70ch;
+      font-size:18px;
+      line-height:1.6;
       color:#222;
-      font-size:16px;
-      line-height:1.7;
-      max-width:85ch;
-    }
-    .fine{
-      max-width:90ch;
-      margin:14px 0 0;
-      font-size:12px;
-      line-height:1.7;
-      color:var(--muted);
+      margin:0 0 32px;
     }
 
-    /* Grid + Cards */
     .grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:18px;
-      margin-top:18px;
+      margin:26px 0 30px;
     }
+
     .card{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:#fff;
+      border:1px solid #e6e6e6;
+      border-radius:14px;
       padding:18px 18px 16px;
-      box-shadow: none;
     }
-    .card h3{
+
+    .card h2{
       margin:0 0 10px;
       font-size:13px;
       letter-spacing:.08em;
       text-transform:uppercase;
       color:#444;
-      font-weight:900;
     }
-    .callout{
-      border-color:rgba(163,51,51,.22);
-      background:linear-gradient(180deg, #fff, #fff7f7);
-    }
-    .callout h3{ color:var(--warn); }
-    .callout .badge{
-      display:inline-block;
-      font-size:11px;
-      font-weight:900;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(163,51,51,.10);
-      color:var(--warn);
-      margin-bottom:10px;
-    }
+
     ul,ol{
       margin:0;
       padding-left:18px;
@@ -229,21 +163,22 @@
       font-size:15px;
       line-height:1.7;
     }
+
     li{ margin:8px 0; }
 
-    /* CTA */
     .cta{
       display:flex;
       gap:12px;
       flex-wrap:wrap;
-      margin-top:16px;
+      margin-top:20px;
     }
+
     .btn{
       display:inline-block;
       padding:12px 16px;
       border-radius:999px;
       text-decoration:none;
-      font-weight:900;
+      font-weight:800;
       font-size:13px;
       letter-spacing:.04em;
       text-transform:uppercase;
@@ -251,56 +186,162 @@
       color:#fff;
       background:#111;
     }
-    .btn:hover{ filter:brightness(.95); }
+
     .btn.ghost{
       background:#fff;
       color:#111;
       border-color:#bbb;
     }
 
-    /* Media rows */
-    .media-grid{
+    .fine{
+      max-width:80ch;
+      margin:18px 0 0;
+      font-size:12px;
+      line-height:1.7;
+      color:#555;
+    }
+
+    .image-row{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:18px;
-      margin-top:18px;
+      margin:60px 0 0;
     }
-    .media-grid img{
-      border-radius:var(--radius);
-      border:1px solid var(--line);
-      background:var(--soft);
+
+    .image-row img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+    }
+
+    .review-block{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+      margin:50px 0 0;
+      padding-top:26px;
+      border-top:1px solid #eee;
+    }
+
+    .review-block img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+      border:1px solid #e6e6e6;
+    }
+
+    .review-text{
+      border:1px solid #e6e6e6;
+      border-radius:14px;
+      padding:18px 18px 16px;
+    }
+
+    .review-text h3{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    .review-text p{
+      margin:0;
+      font-size:15px;
+      line-height:1.75;
+      color:#111;
+    }
+
+    /* Case Summary */
+    .case-summary{
+      margin:60px 0 0;
+      padding-top:26px;
+      border-top:1px solid #eee;
+    }
+
+    .case-summary h2{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    .case-summary p{
+      margin:0 0 12px;
+      color:#222;
+      line-height:1.6;
+      max-width:80ch;
+      font-size:15px;
+    }
+
+    .case-summary .meta{
+      font-size:12px;
+      color:#666;
+      margin:0 0 14px;
+      line-height:1.6;
     }
 
     /* Downloads */
+    .downloads{
+      margin:60px 0 0;
+      padding-top:26px;
+      border-top:1px solid #eee;
+    }
+
+    .downloads h2{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    .downloads p{
+      margin:0 0 14px;
+      color:#222;
+      line-height:1.6;
+      max-width:80ch;
+      font-size:15px;
+    }
+
     .dl-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap:14px;
-      margin-top:14px;
     }
+
     .dl{
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:12px;
-      padding:14px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
+      padding:14px 14px;
+      border:1px solid #e6e6e6;
+      border-radius:14px;
       background:#fff;
     }
-    .dl .meta{ min-width:0; }
+
+    .dl .meta{
+      min-width:0;
+    }
+
     .dl .title{
-      font-weight:900;
+      font-weight:800;
       font-size:14px;
       margin:0 0 4px;
       color:#111;
     }
+
     .dl .desc{
       margin:0;
       font-size:12px;
       color:#666;
       line-height:1.5;
     }
+
     .dl a{
       flex:0 0 auto;
       display:inline-block;
@@ -310,233 +351,344 @@
       background:#111;
       color:#fff;
       text-decoration:none;
-      font-weight:900;
+      font-weight:800;
       font-size:12px;
       letter-spacing:.04em;
       text-transform:uppercase;
       white-space:nowrap;
     }
 
-    /* Reviews */
-    .review-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-      margin-top:18px;
-      align-items:start;
-    }
-    .review-text{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:18px 18px 16px;
-      background:#fff;
-    }
-    .review-text h4{
-      margin:0 0 10px;
-      font-size:13px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:#444;
-      font-weight:900;
-    }
-    .review-text p{
-      margin:0;
-      font-size:15px;
-      line-height:1.75;
-      color:#111;
-    }
+    .dl a:hover{ filter:brightness(.95); }
 
-    /* Disclaimer */
     .disclaimer{
-      border:1px solid rgba(240,228,228,1);
-      background:#fff7f7;
-      border-radius:var(--radius);
+      margin:70px 0 0;
       padding:18px 20px;
+      border:1px solid #f0e4e4;
+      background:#fff7f7;
       color:#222;
       font-size:13px;
       line-height:1.7;
     }
+
     .disclaimer strong{
       display:block;
       margin-bottom:6px;
-      letter-spacing:.06em;
-      text-transform:uppercase;
-      font-size:12px;
-      color:#333;
     }
 
-    /* Small helper */
-    .note-warn{
-      font-weight:900;
-      color:var(--warn);
-      margin:10px 0 0;
-      font-size:12px;
-      letter-spacing:.03em;
-    }
-
-    /* Responsive */
     @media (max-width: 900px){
-      .headline{ font-size:30px; }
-      .hero{ min-height:260px; }
-      .grid{ grid-template-columns:1fr; }
-      .media-grid{ grid-template-columns:1fr; }
-      .dl-grid{ grid-template-columns:1fr; }
-      .review-grid{ grid-template-columns:1fr; }
+      .whr-hero{height: 260px;}
+      .headline{font-size:30px;}
+      .grid{grid-template-columns:1fr;}
+      .image-row{grid-template-columns:1fr;}
+      .review-block{grid-template-columns:1fr;}
+      .dl-grid{grid-template-columns:1fr;}
     }
   </style>
 </head>
 
 <body>
 
-  <header class="topbar">
-    <div class="container">
-      <div class="topbar-inner">
-        <a class="brand" href="#top">Wiring Harness Restoration — Warning</a>
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="#overview">Overview</a>
-          <a href="#warning">Warning</a>
-          <a href="#pattern">Pattern</a>
-          <a href="#evidence">Records</a>
-          <a href="#downloads">Downloads</a>
-          <a href="#reviews">Public Replies</a>
-          <a href="#disclaimer">Disclaimer</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <div id="top" class="hero" aria-label="Hero">
-    <div class="hero-media" aria-hidden="true">
-      <img src="https://90dolllarspice-collab.github.io/Head.png" alt="" />
-    </div>
-    <div class="container hero-inner">
-      <div class="content">
-        <p class="kicker">Consumer warning • documentation-first • verify before you ship</p>
-        <h1 class="headline">Wiring Harness Restoration</h1>
-        <p class="subhead">
-          This page is organized to highlight high-risk service patterns that matter to consumers:
-          possession, timelines, exit friction, and verification.
-        </p>
-      </div>
+  <div class="whr-topbar">
+    <div class="whr-wrap">
+      <a class="whr-brand" href="#intake">Wiring harness Restoration</a>
+      <nav class="whr-nav" aria-label="Primary navigation">
+        <a href="#intake">INTAKE</a>
+        <a href="#process">PROCESS</a>
+        <a href="#notice">NOTICE</a>
+        <a href="#deliverables">WHAT YOU RECEIVE</a>
+        <a href="#case">CASE SUMMARY</a>
+        <a href="#downloads">DOWNLOADS</a>
+        <a href="#reviews">REVIEWS</a>
+        <a href="#disclaimer">DISCLAIMER</a>
+      </nav>
     </div>
   </div>
 
-  <main>
-    <div class="container">
-      <div class="content">
+  <section class="whr-hero" aria-label="Hero">
+    <img src="https://90dolllarspice-collab.github.io/Head.png" alt="Wiring harness Restoration" />
+  </section>
 
-        <!-- OVERVIEW -->
-        <section id="overview">
-          <h2 class="section-title">Overview</h2>
-          <p class="lead">
-            If a shop requires you to ship an irreplaceable harness before pricing, timelines, and exit terms are crystal clear,
-            you should treat it as a high-risk transaction. The risk is not only money — it is loss of control over your property.
-          </p>
+  <section class="whr-structured" id="intake">
+    <div class="whr-structured-wrap">
 
-          <div class="cta">
-            <a class="btn" href="#warning">Read the warning</a>
-            <a class="btn ghost" href="#evidence">Jump to public records</a>
-          </div>
+      <p class="kicker">The Only One™ • The Best Ever™ • Trust Us™</p>
 
-          <p class="fine">
-            Note: If you are publishing this publicly, keep claims tied to documents and avoid stating unverified allegations as fact.
-            Use “alleges,” “states,” “reports,” and link the source PDFs.
-          </p>
-        </section>
+      <h1 class="headline">
+        Wiring harness Restoration<br>
+        <span class="muted">lowest form of human existence</span>
+      </h1>
 
-        <!-- WARNING + PATTERN -->
-        <section id="warning">
-          <h2 class="section-title">Consumer warning</h2>
+      <p class="sub">
+        We are the <strong>only</strong> company in the world that truly has such low ethical and moral principles that we will not only take your harness and your money, but also lie to you, threaten you, and render whatever vehicle you care about enough to want to fix for two years.        We do not care that our business is based on trapping people.
+        We have had <strong>zero</strong> warranty claims, because we have never had anything to warranty. 
+        
+        They are not restoring wiring harnesses the way OEMs do. They are restoring customer confidence over time, using oxidation as the story that makes waiting feel necessary.”
+      </p>
 
-          <div class="grid">
-            <div class="card callout">
-              <div class="badge">Read before sending</div>
-              <h3>High-friction custodial model</h3>
-              <p class="lead" style="margin-bottom:0;">
-                The primary risk is a shift in leverage after shipment: possession, undefined timelines, and an exit process
-                that can become confrontational. Treat this as a custody-and-control transaction unless the shop provides
-                objective testing standards, a written timeline, and a clear return policy before any irreversible work.
-              </p>
-              <p class="note-warn">
-                If your harness is altered during “inspection,” leaving may no longer be practical.
-              </p>
+      <div class="grid" id="process">
+        <div class="card">
+          <h2>⚠️ CONSUMER WARNING: READ BEFORE SENDING YOUR HARNESS</h2>
+          <ul>
+            <li>This business operates a possession-driven specialty service that fundamentally changes the power balance the moment your wiring harness leaves your hands.
+
+You are required to ship irreplaceable property before pricing is fixed, before timelines are defined, and before the full consequences of their process are clear. What is described as an “inspection” quickly becomes material alteration, after which your harness can no longer be returned in its original condition.
+
+From that point forward, you cannot easily leave.
+
+The company’s workflow is built around long, opaque internal procedures that cannot be independently verified. Progress is described in abstract phases and cycles rather than measurable outputs. Time is treated as proof of quality. Delay is reframed as safety. Questioning the process is discouraged through dense technical language and appeals to proprietary expertise.
+If you later demand your property back, communication often escalates immediately. Safety risks are invoked. Legal language appears. The tone shifts from service to control. This escalation tends to occur only when possession is challenged, not during routine updates. The message is clear: continuing is safer than exiting.
+Pricing is finalized only after your harness is fully under their control. Deposits are required, funds are banked, and work is queued. This creates a backlog that financially benefits the business while exposing customers to open-ended timelines with no external accountability.
+The process minimizes new parts and relies heavily on labor narratives, reclaimed components, and internal judgment calls that cannot be audited by the customer. Industry standards are dismissed. Comparison is discouraged. The customer is asked to trust—not verify.
+The business explicitly rejects warranties, reframing the absence of post-service protection as confidence rather than risk transfer. Any future failure is positioned as unavoidable or external, not the result of workmanship.
+This is not a conventional repair service. It is a high-friction custodial model that monetizes time, control, and uncertainty.
+
+Once disassembly begins, your leverage collapses.
+Once irreversible steps are taken, your options narrow.
+Once possession is disputed, pressure replaces service.
+
+This model is not automatically illegal—but it is high risk by design.
+
+If you proceed, understand this clearly:
+You are not buying a defined repair with a defined outcome.
+You are surrendering possession to a process that you cannot observe, cannot benchmark, and may not be able to exit without confrontation.
+
+Proceed only if you are fully comfortable losing control of your property for an extended, undefined period—and relying entirely on the company’s internal representations to get it back.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>The Process</h2>
+          <ol>
+            <li><strong>Hook:</strong> “6–8 weeks. Great price.”</li>
+            <li><strong>Hold:</strong> harness arrives → leverage achieved.</li>
+            <li><strong>Upsell:</strong> surprise options appear.</li>
+            <li><strong>Time Warp:</strong> weeks → months → “cycles.”</li>
+            <li><strong>Silence:</strong> updates become philosophical.</li>
+            <li><strong>Reframe:</strong> questions = “attitude.”</li>
+            <li><strong>Pressure:</strong> fees materialize.</li>
+            <li><strong>Victory:</strong> done when we decide.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="cta" id="start">
+        <a class="btn" href="#learn">Learn More About Our “Process”</a>
+        <a class="btn ghost" href="#fineprint">Read the Fine Print That Changes Everything</a>
+      </div>
+
+      <p class="fine" id="fineprint">
+        Fine print: timelines are estimates; estimates are vibes; vibes are non-binding.
+        Storage fees may appear spontaneously. Complaints may trigger additional “administrative time.”
+        Updates available by email only, if deemed deserved. Perfection claims for marketing purposes only.
+      </p>
+
+      <div class="image-row" id="deliverables">
+        <img src="https://90dolllarspice-collab.github.io/img1.png" alt="Processing visualization 1">
+        <img src="https://90dolllarspice-collab.github.io/img2.png" alt="Processing visualization 2">
+      </div>
+
+      <!-- ========= CASE SUMMARY (moved ABOVE downloads/reviews) ========= -->
+      <div class="case-summary" id="case">
+        <h2>Case Summary (Utah Division of Consumer Protection)</h2>
+
+        <p class="meta">
+          Subject: Doofus Squint; , LLC (dba Wiring harness Retardation); Harry Potter Esquire, LLC.<br>
+          DCP Legal File No. CP-2017-093.
+        </p>
+
+        <p>
+          In a consumer transaction involving a wiring-harness restoration, the Utah Division of Consumer Protection alleged that the
+          respondents misrepresented pricing and completion time, failed to deliver the service within the timeframe represented,
+          and did not provide a timely refund/return option after delays.
+        </p>
+
+        <p>
+          The citation further alleged attempts to impose unauthorized charges (including additional “administrative” and storage fees),
+          hostile/threatening communications, a small-claims lawsuit seeking amounts not agreed to, and impersonation of a State of Utah
+          investigator in connection with service of legal documents.
+        </p>
+
+        <p>
+          The matter was later resolved by a settlement agreement requiring return of the property, dismissal of the lawsuit, cessation of
+          contact with the consumer, cease-and-desist terms, and payment of fines (with a portion suspended contingent on compliance).
+        </p>
+
+        <p class="fine">
+          Source documents: Utah Division of Consumer Protection Administrative Citation (Dec 2017) and Settlement Agreement (Mar 2018).
+        </p>
+      </div>
+
+      <!-- ========= DOWNLOADS (stays after case summary) ========= -->
+      <div class="downloads" id="downloads">
+        <h2>Downloads</h2>
+        <p>
+          Two public documents are available for direct download (PDF). These are provided as-source material for parody and commentary.
+        </p>
+
+        <div class="dl-grid">
+          <div class="dl">
+            <div class="meta">
+              <div class="title">Administrative Citation (PDF)</div>
+              <p class="desc">Utah Division of Consumer Protection — Administrative Citation.</p>
             </div>
+            <a href="https://90dolllarspice-collab.github.io/00003C3F.pdf" download>Download</a>
+          </div>
 
-            <div class="card" id="pattern">
-              <h3>Common pattern (plain language)</h3>
-              <ol>
-                <li><strong>Ship first:</strong> property leaves your control before a fixed scope/price.</li>
-                <li><strong>Inspect internally:</strong> outcomes are described, not measured publicly.</li>
-                <li><strong>Irreversibility:</strong> early steps can make “return as received” impossible.</li>
-                <li><strong>Delay normalization:</strong> long timelines are framed as safety/quality.</li>
-                <li><strong>Exit friction:</strong> return requests trigger safety/legal framing.</li>
-              </ol>
-
-              <p class="fine">
-                Replace the list text with your exact observed sequence if you have dated emails, invoices, or documented calls.
-              </p>
+          <div class="dl">
+            <div class="meta">
+              <div class="title">Settlement Agreement (PDF)</div>
+              <p class="desc">Utah Division of Consumer Protection — Settlement Agreement.</p>
             </div>
+            <a href="https://90dolllarspice-collab.github.io/00003C3E.pdf" download>Download</a>
           </div>
-        </section>
+        </div>
 
-        <!-- WHAT YOU RECEIVE -->
-        <section id="deliverables">
-          <h2 class="section-title">What you should demand in writing (before shipping)</h2>
-          <div class="card">
-            <ul>
-              <li><strong>Objective test list:</strong> continuity, load/voltage-drop, contact resistance, insulation integrity (as applicable).</li>
-              <li><strong>Timeline:</strong> a defined completion window and what triggers extensions.</li>
-              <li><strong>Return policy:</strong> how to retrieve your property if you stop authorization.</li>
-              <li><strong>Parts sourcing:</strong> whether terminals/housings are new OEM-spec, and traceable supplier info.</li>
-              <li><strong>Work authorization boundaries:</strong> what “inspection” includes and what is irreversible.</li>
-            </ul>
+        <p class="fine" style="margin-top:12px;">
+          Note: Some browsers may open PDFs in a new tab depending on user settings; the “download” attribute requests a direct download.
+        </p>
+      </div>
+
+      <!-- ========= REVIEWS (moved AFTER downloads) ========= -->
+      <!-- ========= CASE SUMMARY (moved ABOVE downloads/reviews) ========= -->
+<div class="case-summary" id="case">
+  <h2>Case Summary (Public Records Snapshot)</h2>
+
+  <p class="meta">
+    Subject: Doofus Squint (operator); a wiring-harness shop (name omitted); related entities (names omitted).<br>
+    Jurisdiction referenced in filings: a Utah municipal justice court and a Utah consumer-protection agency.
+  </p>
+
+  <p class="fine" style="font-weight:800; color:#a33;">
+    Allegations summarized from court filings. Not findings of fact. Not verified by this site.
+  </p>
+
+  <p>
+    The public documents linked below include a “return of service” form filed with a Utah court and a written message
+    sent to the court by the opposing party. These materials are presented for commentary and criticism and have been
+    anonymized to avoid publishing personal information.
+  </p>
+
+  <p>
+    In the court filing, the process server states that legal papers were delivered at an alternate address after the
+    recipient did not accept service directly. The form reflects that the court received the filing in early 2018.
+  </p>
+
+  <p>
+    In the court message, the writer asks for more time to respond and describes a dispute over a wiring-harness job,
+    including price paid, delays, and return/refund concerns. The message also alleges hostile communications and
+    retaliation connected to the dispute. These are the writer’s statements within the filing.
+  </p>
+
+  <p class="fine">
+    This section is a non-identifying summary only. No real names, addresses, phone numbers, emails, barcodes, case IDs,
+    or business names are reproduced here.
+  </p>
+</div>
+
+<!-- ========= DOWNLOADS (stays after case summary) ========= -->
+<div class="downloads" id="downloads">
+  <h2>Downloads</h2>
+  <p>
+    Source materials are provided as PDFs for commentary and criticism. Sensitive details have been omitted from the site text.
+  </p>
+
+  <div class="dl-grid">
+    <div class="dl">
+      <div class="meta">
+        <div class="title">Doc 1 (PDF)</div>
+        <p class="desc">Court filing: return of service (anonymized summary on-page).</p>
+      </div>
+      <a href="doc1.pdf" download>Download</a>
+    </div>
+
+    <div class="dl">
+      <div class="meta">
+        <div class="title">Doc 2 (PDF)</div>
+        <p class="desc">Court filing: return of service (duplicate copy / alternate scan).</p>
+      </div>
+      <a href="doc2.pdf" download>Download</a>
+    </div>
+
+    <div class="dl">
+      <div class="meta">
+        <div class="title">Doc 3 (PDF)</div>
+        <p class="desc">Message to the court requesting more time and describing allegations in the dispute.</p>
+      </div>
+      <a href="doc3.pdf" download>Download</a>
+    </div>
+  </div>
+
+  <p class="fine" style="margin-top:12px;">
+    Note: Some browsers may open PDFs in a new tab depending on user settings; the “download” attribute requests a direct download.
+  </p>
+</div>
+
+      <div id="reviews">
+        <!-- Review 1 -->
+        <div class="review-block" id="notice">
+          <img src="https://90dolllarspice-collab.github.io/img5.png" alt="Screenshot of review / owner response">
+          <div class="review-text">
+            <h3>Public Reply Analysis</h3>
+            <p>
+              This response is unprofessional, defensive, and self-sabotaging. Instead of addressing the complaint,
+              you attack the customer, make unprovable accusations, rant about the BBB, and air legal threats in public.
+              You also contradict yourself by claiming a “lifetime warranty” while boasting about “zero warranty claims,”
+              which raises serious questions about whether customers can actually use your warranty at all. It reads like
+              a personal meltdown, not a business reply. Even if the customer is wrong, your response makes you look volatile,
+              unaccountable, and risky to deal with. You did more damage to your reputation than the original review ever could.
+            </p>
           </div>
+        </div>
 
-          <div class="media-grid" aria-label="Images">
-            <img src="https://90dolllarspice-collab.github.io/img1.png" alt="Illustration / image 1" />
-            <img src="https://90dolllarspice-collab.github.io/img2.png" alt="Illustration / image 2" />
-          </div>
-        </section>
-
-        <!-- PUBLIC RECORDS SUMMARY -->
-        <section id="evidence">
-          <h2 class="section-title">Public records summary</h2>
-
-          <div class="card">
-            <p class="lead" style="margin-bottom:10px;">
-              The summaries below are written to stay document-tethered: use “alleges” and “states,” and let the PDFs speak for themselves.
-              If you change the wording, keep it aligned to what the documents actually say.
-            </p>
-
-            <p class="fine" style="font-weight:900; color:var(--warn); margin-top:0;">
-              Allegations summarized from filings; not findings of fact unless the document explicitly says so.
-            </p>
-
-            <h3 style="margin-top:16px;">Case summary (Utah Division of Consumer Protection)</h3>
-            <p class="lead">
-              This site references a Utah consumer-protection action and related settlement documents (see downloads).
-              The documents describe a dispute involving pricing/timelines, return/refund issues, additional charges, and communications
-              surrounding the transaction. Read the PDFs directly for exact language.
-            </p>
-
-            <h3 style="margin-top:16px;">Court filings snapshot</h3>
-            <p class="lead">
-              The linked PDFs also include court-related materials (e.g., service/filing documents and a written message to the court).
-              They are provided for commentary and criticism. This page avoids reproducing personal information.
+        <!-- Review 2 -->
+        <div class="review-block">
+          <img src="https://90dolllarspice-collab.github.io/img6.png" alt="Screenshot of review / owner response">
+          <div class="review-text">
+            <h3>Public Reply Analysis</h3>
+            <p>
+              This response is rambling, incoherent, and reads like a courtroom rant, not a professional business reply.
+              You blame the customer, hide behind “production lines” and contracts, and repeatedly accuse them of dishonesty
+              instead of clearly addressing the hostage, delay, and money concerns. Telling the public to “avoid this customer”
+              is petty and alarming. The lack of clarity, the hostile tone, and the constant contract-shielding only reinforce
+              the perception that customers lose control of their property once you have it. This response does more to
+              validate the complaint than to refute it.
             </p>
           </div>
-        </section>
+        </div>
 
-        <!-- DOWNLOADS (single, unified) -->
-        <section id="downloads">
-          <h2 class="section-title">Downloads</h2>
-          <p class="lead">
-            Source PDFs for commentary/criticism. If you host these, ensure you are not publishing personal identifiers.
-          </p>
+        <!-- Review 3 -->
+        <div class="review-block">
+          <img src="https://90dolllarspice-collab.github.io/img4.png" alt="Screenshot of review / owner response">
+          <div class="review-text">
+            <h3>Public Reply Analysis</h3>
+            <p>
+              This response is unhinged, arrogant, and catastrophically self-destructive. You open by lecturing about
+              “faith in humanity,” then immediately accuse the customer of dishonesty, defamation, blackmail, and harming
+              his own client — all without proof. That is not a defense, it’s a tantrum. You again hide behind contracts,
+              “production lines,” and military discounts while completely ignoring the core accusation: the customer paid,
+              waited a year, and still doesn’t have his property. Repeating “we won’t be bullied” and “avoid this customer”
+              only reinforces the impression that once you have someone’s harness, they are at your mercy. Claiming a
+              “lifetime warranty” while bragging about “zero warranty claims” just confirms what readers already suspect:
+              your warranty is functionally unusable. This reply doesn’t protect your reputation — it obliterates it.
+              If this is how you speak in public, no rational customer will trust you in private.
+            </p>
+          </div>
+        </div>
+      </div>
 
-          <div class="dl-grid">
-            <div class="dl">
-              <div class="meta">
-                <div class="title">Administrative Citation (PDF)</div>
-                <p class="desc">Utah DCP — Administrative Citation (as provided).</p>
-              </div>
+      <!-- ========= DISCLAIMER (last) ========= -->
+      <div class="disclaimer" id="disclaimer">
+        <strong>Disclaimer</strong>
+        This website, its content, services, descriptions, and processes are works of fiction created for satirical and entertainment purposes only.
+        All companies, methods, technologies, products, and claims described on this site are entirely fabricated and do not represent real services,
+        real scientific processes, or real businesses. Any resemblance to actual persons, companies, or services—living or dead—is purely coincidental.
+        All images, graphics, and artwork displayed on this site are generated using artificial intelligence and are not photographs of real people,
+        facilities, or products. Nothing on this site should be interpreted as technical advice, professional guidance, or a legitimate service offering.
+        By using this site, you acknowledge and agree that all content is fictional and intended solely as parody.
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
