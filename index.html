@@ -1,29 +1,570 @@
-<section class="warning">
-  <div class="donate-grid">
-    <div class="warning__content">
-      <h2 class="warning__title">Purpose of this site</h2>
-      <p>
-        The sole purpose of this site is to warn potential future customers about a scheme crafted by a Utah resident named Darren Flit. He operates a business called <strong>Wiring Harness Restoration</strong>, which is designed around taking possession of one-of-a-kind or rare items, such as automotive wiring harnesses.
-      </p>
-      <p>
-        He claims to restore these harnesses using a process he calls <q>deoxidation</q>, which is supposedly intended to restore wire conductivity and somehow bring the harnesses back to life.
-      </p>
-      <p class="warning__callout">
-        This “deoxidation” process is entirely fabricated. It is not a real or recognized practice...
-      </p>
-      <p>
-        The purpose of inventing this so-called deoxidation process is to introduce an unknown and unverifiable variable into the work...
-      </p>
-      <p>
-        Because the business is marketed as “restoration,” he can claim that customers are paying specifically for this undefined process...
-      </p>
-      <p>
-        Customers typically enter into this arrangement believing they are paying for a repair...
-      </p>
-      <p>
-        However, once the customer signs the contract—containing language buried in the middle that allows the process to take up to two years—they are bound by terms they would not reasonably expect...
-      </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiring harness Restoration</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J4VRPCLLWX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J4VRPCLLWX');
+</script>
+  <style>
+    /* =========================================================
+       Tokens / Base
+    ========================================================= */
+    :root{
+      --blue:#1b74e4;
+      --text:#111;
+      --muted:#444;
+      --line:#e6e6e6;
+      --max:1200px;
+    }
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:#fff;
+      color:var(--text);
+    }
+
+    ul,ol{
+      margin:0;
+      padding-left:18px;
+      color:#111;
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    li{ margin:8px 0; }
+
+    /* =========================================================
+       Top Bar / Nav
+    ========================================================= */
+    .whr-topbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .whr-wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .whr-brand{
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .whr-nav{
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .whr-nav a{
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color:#111;
+      text-decoration: none;
+      padding: 6px 2px;
+    }
+
+    .whr-nav a:hover{ color: var(--blue); }
+
+    /* =========================================================
+       Hero
+    ========================================================= */
+    .whr-hero{
+      position: relative;
+      height: 360px;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+    }
+
+    .whr-hero img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .whr-hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: rgba(0,0,0,0.35);
+    }
+
+    /* =========================================================
+       Structured Section / Typography
+    ========================================================= */
+    .whr-structured{
+      background:#ffffff;
+      padding:80px 20px 90px;
+    }
+
+    .whr-structured-wrap{
+      max-width:980px;
+      margin:0 auto;
+    }
+
+    .kicker{
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:#666;
+      margin:0 0 14px;
+    }
+
+    .headline{
+      font-size:44px;
+      font-weight:800;
+      line-height:1.05;
+      margin:0 0 18px;
+      color:#111;
+    }
+
+    .muted{
+      color:#666;
+      font-weight:600;
+    }
+
+    .sub{
+      max-width:70ch;
+      font-size:18px;
+      line-height:1.6;
+      color:#222;
+      margin:0 0 32px;
+    }
+
+    .fine{
+      max-width:80ch;
+      margin:18px 0 0;
+      font-size:12px;
+      line-height:1.7;
+      color:#555;
+    }
+
+    /* =========================================================
+       Layout Blocks
+    ========================================================= */
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin:26px 0 30px;
+    }
+
+    .card{
+      border:1px solid #e6e6e6;
+      border-radius:14px;
+      padding:18px 18px 16px;
+    }
+
+    .card h2{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      border:1px solid #111;
+      color:#fff;
+      background:#111;
+    }
+
+    .btn.ghost{
+      background:#fff;
+      color:#111;
+      border-color:#bbb;
+    }
+
+    .image-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin:60px 0 0;
+    }
+
+    .image-row img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+    }
+
+    /* =========================================================
+       Reviews
+    ========================================================= */
+    .review-block{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+      margin:50px 0 0;
+      padding-top:26px;
+      border-top:1px solid #eee;
+    }
+
+    .review-block img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+      border:1px solid #e6e6e6;
+    }
+
+    .review-text{
+      border:1px solid #e6e6e6;
+      border-radius:14px;
+      padding:18px 18px 16px;
+    }
+
+    .review-text h3{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    .review-text p{
+      margin:0;
+      font-size:15px;
+      line-height:1.75;
+      color:#111;
+    }
+
+    /* =========================================================
+       Case Summary
+    ========================================================= */
+    .case-summary{
+      margin:60px 0 0;
+      padding-top:26px;
+      border-top:1px solid #eee;
+    }
+
+    .case-summary h2{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    .case-summary p{
+      margin:0 0 12px;
+      color:#222;
+      line-height:1.6;
+      max-width:80ch;
+      font-size:15px;
+    }
+
+    .case-summary .meta{
+      font-size:12px;
+      color:#666;
+      margin:0 0 14px;
+      line-height:1.6;
+    }
+
+    /* =========================================================
+       Downloads
+    ========================================================= */
+    .downloads{
+      margin:60px 0 0;
+      padding-top:26px;
+      border-top:1px solid #eee;
+    }
+
+    .downloads h2{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    .downloads p{
+      margin:0 0 14px;
+      color:#222;
+      line-height:1.6;
+      max-width:80ch;
+      font-size:15px;
+    }
+
+    .dl-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+
+    .dl{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 14px;
+      border:1px solid #e6e6e6;
+      border-radius:14px;
+      background:#fff;
+    }
+
+    .dl .meta{ min-width:0; }
+
+    .dl .title{
+      font-weight:800;
+      font-size:14px;
+      margin:0 0 4px;
+      color:#111;
+    }
+
+    .dl .desc{
+      margin:0;
+      font-size:12px;
+      color:#666;
+      line-height:1.5;
+    }
+
+    .dl a{
+      flex:0 0 auto;
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid #111;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .dl a:hover{ filter:brightness(.95); }
+
+    /* =========================================================
+       Donate / Meme block (NEW)
+    ========================================================= */
+    .donate{
+      margin:30px 0 0;
+    }
+
+    .donate-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .donate-grid img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+      border:1px solid #e6e6e6;
+    }
+
+    .donate-box{
+      border:1px solid #e6e6e6;
+      border-radius:14px;
+      padding:18px 18px 16px;
+      background:#fff;
+    }
+
+    .donate-box h3{
+      margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#444;
+    }
+
+    .donate-box p{
+      margin:0 0 12px;
+      font-size:15px;
+      line-height:1.75;
+      color:#111;
+    }
+
+    .donate-box p:last-child{ margin-bottom:0; }
+
+    .donate-box a{
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .donate-box a:hover{ text-decoration: underline; }
+
+    /* =========================================================
+       Disclaimer
+    ========================================================= */
+    .disclaimer{
+      margin:70px 0 0;
+      padding:18px 20px;
+      border:1px solid #f0e4e4;
+      background:#fff7f7;
+      color:#222;
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .disclaimer strong{
+      display:block;
+      margin-bottom:6px;
+    }
+
+    /* =========================================================
+       Responsive
+    ========================================================= */
+    @media (max-width: 900px){
+      .whr-hero{ height: 260px; }
+      .headline{ font-size:30px; }
+      .grid{ grid-template-columns:1fr; }
+      .image-row{ grid-template-columns:1fr; }
+      .review-block{ grid-template-columns:1fr; }
+      .dl-grid{ grid-template-columns:1fr; }
+      .donate-grid{ grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- =======================================================
+       Top Bar
+  ======================================================= -->
+  <header class="whr-topbar" role="banner">
+    <div class="whr-wrap">
+      <a class="whr-brand" href="#intake">Wiring harness Restoration</a>
+      <nav class="whr-nav" aria-label="Primary navigation">
+        <a href="#case">CASE SUMMARY</a>
+        <a href="#downloads">DOWNLOADS</a>
+        <a href="#disclaimer">DISCLAIMER</a>
+      </nav>
     </div>
-    <img src="meme1.jpeg" alt="Meme" />
-  </div>
-</section>
+  </header>
+
+  <!-- =======================================================
+       Hero
+  ======================================================= -->
+  <section class="whr-hero" aria-label="Hero">
+    <img src="https://90dolllarspice-collab.github.io/head.png" alt="Wiring harness Restoration" />
+  </section>
+
+  <!-- =======================================================
+       Main Content
+  ======================================================= -->
+  <main class="whr-structured" id="intake">
+    <div class="whr-structured-wrap">
+
+      <p class="kicker">Wiring Harness Restoration • When incompetence finds a business model.™</p>
+
+      <!-- ===============================
+           Purpose Section w/ Meme
+      ================================= -->
+      <section class="warning">
+        <div class="donate-grid">
+          <div class="warning__content">
+            <h2 class="warning__title">Purpose of this site</h2>
+            <p>The sole purpose of this site is to warn potential future customers about a scheme crafted by a Utah resident named Darren Flit. He operates a business called <strong>Wiring Harness Restoration</strong>, which is designed around taking possession of one-of-a-kind or rare items, such as automotive wiring harnesses.</p>
+            <p>He claims to restore these harnesses using a process he calls <q>deoxidation</q>, which is supposedly intended to restore wire conductivity and somehow bring the harnesses back to life.</p>
+            <p class="warning__callout">This “deoxidation” process is entirely fabricated. It is not a real or recognized practice. Automotive wiring harnesses are not repaired by “deoxidizing” them, nor does anyone solder pins back onto harnesses in the manner implied.</p>
+            <p>The purpose of inventing this so-called deoxidation process is to introduce an unknown and unverifiable variable into the work. It provides a convenient explanation for excessively long timelines, since no customer can independently verify whether this process is occurring. There is no established standard for it.</p>
+            <p>Because the business is marketed as “restoration,” he can claim that customers are paying specifically for this undefined process and argue that if it takes up to two years to “deoxidize” a harness, it is beyond his control—asserting that this is what the customer agreed to.</p>
+            <p>Customers typically enter into this arrangement believing they are paying for a repair. His website strongly implies that this is the service being offered, but that is not the reality. Early on, he suggests the work may take only a few weeks and performs the initial inspection very quickly, often within days.</p>
+            <p>However, once the customer signs the contract—containing language buried in the middle that allows the process to take up to two years—they are bound by terms they would not reasonably expect from a company that was able to provide a prompt inspection and estimate.</p>
+          </div>
+          <img src="meme1.jpeg" alt="Meme" />
+        </div>
+      </section>
+
+      <!-- ===================================================
+           Process
+      =================================================== -->
+      <!-- … your process cards, images, reviews, case summary, etc … -->
+
+      <!-- ===================================================
+           Downloads + Donate
+      =================================================== -->
+      <section class="downloads" id="downloads" aria-label="Downloads">
+        <h2>Downloads</h2>
+        <div class="dl-grid">
+          <!-- Download items unchanged -->
+        </div>
+
+        <!-- Modified Donate section using img1 -->
+        <div class="donate" aria-label="Donate and meme">
+          <div class="donate-grid">
+            <img src="https://90dolllarspice-collab.github.io/img1.png" alt="Processing visualization 1" />
+            <div class="donate-box">
+              <h3>Donate / Support</h3>
+              <p>If you are or were a victim to this company and would like to contribute to the cause 100% will be used towards advertising this page. Email me at <a href="mailto:Sales@wiringharnessrestoration.net">Sales@wiringharnessrestoration.net</a></p>
+              <p>All donations will be anonymous, obviously.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           Reviews
+      =================================================== -->
+      <!-- … your reviews … -->
+
+      <!-- ===================================================
+           Disclaimer
+      =================================================== -->
+      <footer class="disclaimer" id="disclaimer" aria-label="Disclaimer">
+        <strong>Disclaimer</strong>
+        This website, its content, services, descriptions, and processes are works of fiction created for satirical and entertainment purposes only. All companies, methods, technologies, products, and claims described on this site are entirely fabricated…
+      </footer>
+
+    </div>
+  </main>
+</body>
+</html>
