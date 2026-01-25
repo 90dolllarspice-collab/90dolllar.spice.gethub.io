@@ -283,6 +283,39 @@
     /* =========================================================
        Case Summary
     ========================================================= */
+    .case-summary.split{
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+}
+
+.case-summary.split .case-text{
+  flex:1 1 60%;
+}
+
+.case-summary.split .case-image{
+  flex:1 1 40%;
+  text-align:right;
+}
+
+.case-summary.split .case-image img{
+  max-width:100%;
+  height:auto;
+  border:1px solid var(--line);
+  border-radius:4px;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px){
+  .case-summary.split{
+    flex-direction:column;
+  }
+
+  .case-summary.split .case-image{
+    text-align:left;
+  }
+}
+
     .case-summary{
       margin:60px 0 0;
       padding-top:26px;
@@ -699,24 +732,36 @@
       <!-- ===================================================
            Case Summary (Original)
       =================================================== -->
-      <section class="case-summary" id="case" aria-label="Public Records">
-        <h2>Case Summary (Utah Division of Consumer Protection)</h2>
+ <section class="case-summary split" id="case" aria-label="Public Records">
+  <div class="case-text">
+    <h2>Case Summary (Utah Division of Consumer Protection)</h2>
 
-        <p class="meta">
-          Subject: Doofus Squint; , LLC (dba Wiring harness Retardation); Harry Potter Esquire, LLC.<br />
-          DCP Legal File No. CP-2017-093.
-        </p>
+    <p class="meta">
+      Subject: Doofus Squint, LLC (dba Wiring Harness Retardation); Harry Potter Esquire, LLC.<br />
+      DCP Legal File No. CP-2017-093.
+    </p>
 
-        <p>
-          The citation alleged attempts to impose unauthorized charges (including additional “administrative” and storage fees),
-          hostile/threatening communications, a small-claims lawsuit seeking amounts not agreed to, and impersonation of a State of Utah
-          investigator in connection with service of legal documents.
-        </p>
-        
-        <p class="fine">
-          Source documents: Utah Division of Consumer Protection Administrative Citation (Dec 2017) and Settlement Agreement (Mar 2018).
-        </p>
-      </section>
+    <p>
+      The citation alleged attempts to impose unauthorized charges (including additional “administrative” and storage fees),
+      hostile or threatening communications, a small-claims lawsuit seeking amounts not agreed to, and impersonation of a
+      State of Utah investigator in connection with service of legal documents.
+    </p>
+
+    <p class="fine">
+      Source documents: Utah Division of Consumer Protection Administrative Citation (Dec 2017) and
+      Settlement Agreement (Mar 2018).
+    </p>
+
+    <p class="fine" style="margin-top:18px;">
+      At one point, Darren claimed that high school students were helping after school. He would offer discounts,
+      but said it would take longer because of this. This was a completely fabricated lie.
+    </p>
+  </div>
+
+  <div class="case-image">
+    <img src="Scumbag Darren.jpeg" alt="Scumbag Darren" />
+  </div>
+</section>
 
       <!-- ===================================================
            Downloads (Original)
